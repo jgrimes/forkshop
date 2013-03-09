@@ -4,22 +4,52 @@
 body {
   padding-top: 60px;
   padding-bottom: 40px;
+  background-color: #eaeaea;
+  font-family: Gulim; Arial; 
 }
 
 h3 {
-	font-size: 22px;
+	font-size: 20px;
 }
 
-/* Image Styles */
+footer {
+	text-align: right;
+}
+
+
+.navbar-inverse .brand,
+.navbar-inverse .nav > li > a {
+  color: #dddddd;
+}
+
+.navbar-inverse .navbar-inner {
+  background-color: #87a5d0;
+  border-color: #252525;
+}
+
+.navbar-inverse .brand {
+	color: #cccccc;
+}
+
 .titleimg {
 	text-align: center;
 }
 
 .hero-unit {
-	color: #afcfff;
+	padding: 0px;
+    margin-bottom: 30px;
+    width: auto;
+    background-color: #eaeaea;
+	/*background-color: #afcfff;*/
+	width: 100%;
 }
 
 .spanimg {
 	text-align: center;
 	height: 200px;
 }
+
+.span4 h3 {
+	text-align: center;
+}
+
