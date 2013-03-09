@@ -26,6 +26,8 @@
     "mongoose": "~3.5.7",
     "passport-local": "~0.1.6",
     "async": "~0.2.6",
-    "connect-redis": "~1.4.5"
+    "connect-redis": "~1.4.5",
+    "github": "~0.1.8",
+    "restler": "~2.0.1"
   }
 }

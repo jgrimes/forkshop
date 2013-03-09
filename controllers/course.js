@@ -21,7 +21,40 @@ module.exports = {
         res.redirect( '/courses/' + course._id);
       });
 
-    }
+      // save to Git...
+      console.log("creating a repo named "+course.name);
+      var GitHubApi = require("github");
+      var github = new GitHubApi({
+        // required
+        version: "3.0.0",
+        // optional
+        timeout: 5000
+      });
+      github.authenticate({
+        type: "basic", // obviously, make OAuth happen here.
+        username: 'coursefork-test',
+        password: 'coursefork001'
+      });
+
+     // this block is for debugging
+     //github.user.getFollowingFromUser({
+        //user: "coursefork-test"
+     //}, function(err, res) {
+        //console.log(JSON.stringify(res));
+     //});
+
+      github.repos.create({
+        "name": course.name,
+        "description": course.description,
+        "homepage": "https://github.com",
+        "private": false,
+        "has_wiki": true
+      }, function(err, res) {
+        console.log("Got err?", err);
+        console.log("Got res?", res);
+      })
+
+  }
   , view: function(req, res, next) {
       Course.findOne({ _id: req.param('courseID') }).exec(function(err, course) {
         if (!course) {
