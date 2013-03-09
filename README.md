@@ -5,12 +5,6 @@ Fork your course
 Forkshop is a web app for designing and forking educational workshops.  
 
 ## Usage
-Instructions forthcoming.
-
-## Contributions
-...are welcome.  Please open an issue and submit a pull request.  Contributor guidelines forthcoming.
-
-## Instructions
 You'll need [node.js](http://nodejs.org) and [mongodb](http://mongodb.org) to run this application.  Installing these is out-of-scope, and instructions are contained on the links to the left.
 
 1. Clone the project (you can download the zip above or use git)
@@ -18,6 +12,9 @@ You'll need [node.js](http://nodejs.org) and [mongodb](http://mongodb.org) to ru
 3. Run `node app.js`.  
 
 You'll now, by default, have a web application running at http://localhost:9200 -- you can edit the port by changing config.js.
+
+## Contributions
+...are welcome.  Please open an issue and submit a pull request.  Contributor guidelines forthcoming.
 
 ## License
 © 2013 Elliott Hauser, Matt Hoffman, and Eric Martindale.  Provided under a [MIT License](http://opensource.org/licenses/MIT).
