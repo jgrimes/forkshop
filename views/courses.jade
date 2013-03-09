@@ -5,4 +5,5 @@ block content
 
   ul
   - for course in courses
-    li #{course.name}
+    li
+      a(href="/courses/#{course._id}") #{course.name}
