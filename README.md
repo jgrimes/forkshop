@@ -1,4 +1,4 @@
-![logo](images/forkshoptag130px.png)
+![logo](images/forkshophoriz700px.png)
 
 ## What is it?
 Forkshop is a web app for designing and forking educational workshops.  
