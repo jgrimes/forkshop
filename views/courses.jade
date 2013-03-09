@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1 Available Courses
+
+  ul
+  - for course in courses
+    li #{course.name}
