@@ -1,24 +1,49 @@
 extends layout
 
 block content
+
   if (typeof(user) != 'undefined')
     h2 Welcome, #{user.username}!
 
   else
     .hero-unit
-      h1 Hello, Startup Weekend.
-      p A simple framework for building your MVP.
+      .titleimg
+        img(src="/img/cflogo700px.png")
+      a.btn.btn-large.btn-primary.pull-right(href="/auth/github") Get Started &raquo;
 
     .row-fluid(style="margin-top: 3em; margin-bottom: 3em;")
 
       .span4
-        h3 Tagline 1.
-        p Super awesome pitch belongs here.
+        h3 Stop Starting From Scratch
+        .spanimg
+          img(src="/img/bulb200px.png")
+        p Browse the world's best courses for inspiration, ideas, and content.
 
       .span4
-        h3 Tagline 2.
-        p What else can sell your app?
+        h3 Get Credit for Your Work
+        .spanimg        
+          img(src="/img/wreath200px.png")
+        p Show off your teaching expertise and build a public portfolio of courses you've contributed to.
 
       .span4
-        h3 Already registered?
-        include forms/login
+        h3 Teaching at the Center
+        .spanimg
+          img(src="/img/Award200px.png")
+        p We believe that Teachers are the future of education.  Coursefork lets you get into the classroom faster with better content.
+
+    .row-fluid(style="margin-top: 3em; margin-bottom: 3em;")
+
+      .span4
+        h3 Unlimited Open Courses
+        .spanimg
+          img(src="/img/new200px.png")
+        p Create as many open courses as you like.  Anyone can copy a course by forking it.
+
+      .span4
+        h3 Publish the the Web
+        .spanimg
+          img(src="/img/out200px.png")
+        p Get your course materials out there where your students can see them, using our site or yours.
+
+        center
+          a.btn.btn-large.btn-primary(href="/auth/github") Login with GitHub &raquo;

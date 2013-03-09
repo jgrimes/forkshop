@@ -1,7 +1,25 @@
-/* [mostly] empty tile for your CSS! */
+/* Edit this CSS */
 
 /* make room for the header */
 body {
   padding-top: 60px;
   padding-bottom: 40px;
+}
+
+h3 {
+	font-size: 22px;
+}
+
+/* Image Styles */
+.titleimg {
+	text-align: center;
+}
+
+.hero-unit {
+	color: #afcfff;
+}
+
+.spanimg {
+	text-align: center;
+	height: 200px;
 }
