@@ -1,9 +1,10 @@
 var express = require('express')
   , app = express()
   , mongoose = require('mongoose')
+  , flash = require('connect-flash')
   , passport = require('passport')
   , LocalStrategy = require('passport-local').Strategy
-  , passportLocalMongoose = require('passport-local-mongoose')
+  , GitHubStrategy = require('passport-github').Strategy
   , config = require('./config')
   , database = require('./db')
   , RedisStore = require('connect-redis')(express)
@@ -18,45 +19,64 @@ User      = require('./models/User').User;
 Course    = require('./models/Course').Course;
 //Thing   = require('./models/Thing').Thing;
 
-// make the HTML output readible, for designers. :)
-app.locals.pretty = true;
-
-// any files in the /public directory will be accessible over the web,
-// css, js, images... anything the browser will need.
-app.use(express.static(__dirname + '/public'));
-
-app.engine('jade', require('jade').__express);
-
-// set up middlewares for session handling
-app.use(express.cookieParser( config.cookieSecret ));
-app.use(express.bodyParser());
-app.use(express.methodOverride());
-app.use(express.session({
-    store: sessionStore
-  , secret: config.cookieSecret
-}));
-
-/* Configure the registration and login system */
-app.use(passport.initialize());
-app.use(passport.session());
-
-app.use(app.router);
-
-app.set('view engine', 'jade');
-
-/* configure some local variables for use later */
-app.use(function(req, res, next) {
-  console.log(req.user);
-
-  app.locals.user = req.user;
-  next();
+passport.serializeUser(function(user, done) {
+  done(null, user);
 });
 
-passport.use(new LocalStrategy( User.authenticate() ) );
+passport.deserializeUser(function(obj, done) {
+  done(null, obj);
+});
 
-passport.serializeUser( User.serializeUser() );
-passport.deserializeUser( User.deserializeUser() );
+//passport.use(new LocalStrategy( User.authenticate() ) );
+passport.use(new GitHubStrategy({
+    clientID: config.github.clientID,
+    clientSecret: config.github.clientSecret,
+    callbackURL: '/auth/github/callback'
+  },
+  function(accessToken, refreshToken, profile, done) {
+    console.log(profile);
+    /* process.nextTick(function () {
+      return done(null, profile);
+    }); */
+    User.findOne({ 'github.id': profile.id }, function(err, user) {
+      if (!user) {
+        var user = new User({
+            username: profile.username
+          , email: profile.emails[0].value
+          , github: {
+                id: profile.id
+              , username: profile.username
+              , token: accessToken
+              , refreshToken: refreshToken
+            }
+        });
+      }
 
+      user.email                = profile.emails[0].value;
+      user.username             = profile.username;
+      user.github.token         = accessToken;
+      user.github.refreshToken  = refreshToken;
+
+      user.save(function(err) {
+        return done(err, user);
+      });
+    });
+  }
+));
+
+app.set('views', __dirname + '/views');
+app.set('view engine', 'jade');
+app.use(express.logger());
+app.use(express.cookieParser());
+app.use(express.bodyParser());
+app.use(express.methodOverride());
+app.use(express.session({ secret: 'keyboard cat' }));
+// Initialize Passport!  Also use passport.session() middleware, to support
+// persistent login sessions (recommended).
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(app.router);
+app.use(express.static(__dirname + '/public'));
 
 /* Configure "routes".
     "routes" are the mappings your browser/client use to 
@@ -72,6 +92,7 @@ app.get('/', function(req, res) {
   /* in this function, render the index template, 
      using the [res]ponse. */
   res.render('index', {
+    user: req.user,
     foo: 'bar' //this is an example variable to be sent to the rendering engine
   });
 
@@ -97,9 +118,24 @@ app.post('/register', function(req, res) {
   });
 });
 
-app.post('/login', passport.authenticate('local'), function(req, res) {
+app.post('/login', passport.authenticate('local', {
+  failureRedirect: '/'
+}), function(req, res) {
   res.redirect('/');
 });
+
+app.get('/logout', function(req, res){
+  req.logout();
+  res.redirect('/');
+});
+
+app.get('/auth/github', passport.authenticate('github'));
+
+app.get('/auth/github/callback', 
+  passport.authenticate('github', { failureRedirect: '/login' }),
+  function(req, res) {
+    res.redirect('/');
+  });
 
 app.get('/courses', courses.list);
 app.get('/courses/new', courses.creationForm);

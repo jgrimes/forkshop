@@ -1,6 +1,7 @@
 extends layout
 
 block content
+
   if (typeof(user) != 'undefined')
     h2 Welcome, #{user.username}!
 
@@ -8,6 +9,7 @@ block content
     .hero-unit
       h1 Hello, Startup Weekend.
       p A simple framework for building your MVP.
+      a.btn.btn-large.btn-primary.pull-right(href="/auth/github") Get Started &raquo;
 
     .row-fluid(style="margin-top: 3em; margin-bottom: 3em;")
 
@@ -20,5 +22,5 @@ block content
         p What else can sell your app?
 
       .span4
-        h3 Already registered?
-        include forms/login
+        center
+          a.btn.btn-large.btn-primary(href="/auth/github") Login with GitHub &raquo;

@@ -9,6 +9,12 @@ var UserSchema = new Schema({
     username: { type: String, required: true }
   , email: { type: String, required: true }
   , created: { type: Date, required: true, default: Date.now }
+  , github: {
+        id: { type: Number, unique: true }
+      , username: { type: String }
+      , token: { type: String }
+      , refreshToken: { type: String }
+    }
 });
 
 // attach the passport fields to the model

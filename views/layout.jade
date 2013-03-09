@@ -35,6 +35,9 @@ html
 
 
     .container
+      - if (typeof(message) != 'undefined')
+        h1 #{message}
+
       block content
 
     .container
