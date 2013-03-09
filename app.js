@@ -132,7 +132,7 @@ app.get('/logout', function(req, res){
 
 app.get('/auth/github', passport.authenticate('github'));
 
-app.get('/auth/github/callback', 
+app.get('/auth/github/callback',
   passport.authenticate('github', { failureRedirect: '/login' }),
   function(req, res) {
     res.redirect('/');
@@ -142,7 +142,10 @@ app.get('/courses', courses.list);
 app.get('/courses/new', courses.creationForm);
 app.post('/courses', courses.create);
 app.get('/courses/:courseID', courses.view);
-app.get('/course/fork', courses.fork);
+app.get('/course/fork', courses.fork);// TODO: this shouldn't be a "GET", since we're doing something. POST, perhaps?
+app.get('/course/import/:courseName', courses.repoImport);
+
+//But GET was easier to test.
 
 app.listen( config.appPort , function() {
   console.log('Demo application is now listening on http://localhost:' + config.appPort + ' ...');

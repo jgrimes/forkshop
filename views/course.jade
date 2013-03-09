@@ -2,10 +2,7 @@ extends layout
 
 block content
   h1 Course: #{course.name}
-    form(action="/course/fork", method="POST")
-        input(type="hidden", name="course_name", value="#{course.name}")
-        input(type="hidden", name="owner_name", value="#{course._owner.username}")
-        input.btn.btn-primary.pull-right(type="submit", value="fork")
+        a.btn.btn-primary.pull-right fork
 
   p #{course.description}
 
