@@ -16,6 +16,30 @@ footer {
 	text-align: right;
 }
 
+.started {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+  margin-bottom: 0;
+  cursor: pointer;
+  color: #333333;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  border: 1px solid #bbbbbb;
+  *border: 0;
+  border-bottom-color: #a2a2a2;
+  *margin-left: .3em;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border: 0px;
+  padding: 0px;
+}
 
 .navbar-inverse .brand,
 .navbar-inverse .nav > li > a {
@@ -24,7 +48,7 @@ footer {
 
 .navbar-inverse .navbar-inner {
   background-color: #87a5d0;
-  border-color: #252525;
+  border-color: #87a5d0;
 }
 
 .navbar-inverse .brand {
