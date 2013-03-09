@@ -35,9 +35,7 @@ passport.use(new GitHubStrategy({
   },
   function(accessToken, refreshToken, profile, done) {
     console.log(profile);
-    /* process.nextTick(function () {
-      return done(null, profile);
-    }); */
+
     User.findOne({ 'github.id': profile.id }, function(err, user) {
       if (!user) {
         var user = new User({
@@ -63,6 +61,9 @@ passport.use(new GitHubStrategy({
     });
   }
 ));
+
+// make the HTML output readible, for designers. :)
+app.locals.pretty = true;
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
