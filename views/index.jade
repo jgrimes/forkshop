@@ -1,6 +1,7 @@
 extends layout
 
 block content
+
   if (typeof(user) != 'undefined')
     h2 Welcome, #{user.username}!
 
@@ -8,6 +9,7 @@ block content
     .hero-unit
       .titleimg
         img(src="/img/cflogo700px.png")
+      a.btn.btn-large.btn-primary.pull-right(href="/auth/github") Get Started &raquo;
 
     .row-fluid(style="margin-top: 3em; margin-bottom: 3em;")
 
@@ -43,6 +45,5 @@ block content
           img(src="/img/out200px.png")
         p Get your course materials out there where your students can see them, using our site or yours.
 
-      .span4
-        h3 Already registered?
-        include forms/login
+        center
+          a.btn.btn-large.btn-primary(href="/auth/github") Login with GitHub &raquo;
