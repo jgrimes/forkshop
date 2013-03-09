@@ -12,7 +12,7 @@ var express = require('express')
 var courses = require('./controllers/course');
 
 /* Models represent the data your application keeps. */
-/* You'll need at least the User model if you want to 
+/* You'll need at least the User model if you want to
 	allow users to login */
 User      = require('./models/User').User;
 Course    = require('./models/Course').Course;
@@ -59,7 +59,7 @@ passport.deserializeUser( User.deserializeUser() );
 
 
 /* Configure "routes".
-    "routes" are the mappings your browser/client use to 
+    "routes" are the mappings your browser/client use to
     access the logic behind a concept.  Google "REST" to
     learn more about the principle. */
 
@@ -69,7 +69,7 @@ passport.deserializeUser( User.deserializeUser() );
     the [next] function. */
 app.get('/', function(req, res) {
 
-  /* in this function, render the index template, 
+  /* in this function, render the index template,
      using the [res]ponse. */
   res.render('index', {
     foo: 'bar' //this is an example variable to be sent to the rendering engine
@@ -105,6 +105,7 @@ app.get('/courses', courses.list);
 app.get('/courses/new', courses.creationForm);
 app.post('/courses', courses.create);
 app.get('/courses/:courseID', courses.view);
+app.get('/course/fork', courses.fork);
 
 app.listen( config.appPort , function() {
   console.log('Demo application is now listening on http://localhost:' + config.appPort + ' ...');

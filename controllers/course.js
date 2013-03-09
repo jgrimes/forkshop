@@ -56,7 +56,7 @@ module.exports = {
 
   }
   , view: function(req, res, next) {
-      Course.findOne({ _id: req.param('courseID') }).exec(function(err, course) {
+      Course.findOne({ _id: req.param('courseID') }).populate("_owner").exec(function(err, course) {
         if (!course) {
           next();
         } else {
@@ -66,4 +66,7 @@ module.exports = {
         }
       });
     }
+ , fork: function(req, res, next) {
+    console.log("Rawesome, look at me forking.");
+ }
 }
