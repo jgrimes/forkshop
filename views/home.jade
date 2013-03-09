@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1 Welcome, #{user.username}!
+
+  - if (courses)
+    h2 Your Courses
+    ul
+    - for course in courses
+      li
+        a(href="/courses/#{course._id}") #{course.name}
+  - else
+    a.btn.btn-large.btn-primary(href="/courses/create") Create your first course &raquo;
+
+  .row-fluid
+    center
+      a.btn(href="/courses") Browse All Courses &raquo;

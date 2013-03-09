@@ -79,6 +79,11 @@ app.use(passport.session());
 app.use(app.router);
 app.use(express.static(__dirname + '/public'));
 
+/* app.use(function(req, res, next) {
+  app.locals.user = req.user;
+  next();
+}); */
+
 /* Configure "routes".
     "routes" are the mappings your browser/client use to 
     access the logic behind a concept.  Google "REST" to
@@ -92,10 +97,21 @@ app.get('/', function(req, res) {
 
   /* in this function, render the index template, 
      using the [res]ponse. */
-  res.render('index', {
-    user: req.user,
-    foo: 'bar' //this is an example variable to be sent to the rendering engine
-  });
+
+  if (req.user) {
+    Course.find({ _owner: req.user._id }).exec(function(err, courses) {
+      res.render('home', {
+          user: req.user
+        , courses: courses
+      });
+    });
+  } else {
+
+    res.render('index', {
+      user: req.user,
+      foo: 'bar' //this is an example variable to be sent to the rendering engine
+    });
+  }
 
 });
 
@@ -146,4 +162,3 @@ app.get('/courses/:courseID', courses.view);
 app.listen( config.appPort , function() {
   console.log('Demo application is now listening on http://localhost:' + config.appPort + ' ...');
 });
-
