@@ -1,10 +1,6 @@
-forkshop
-========
-
-Fork your course
+![logo](images/forkshoptag130px.png)
 
 ## What is it?
-
 Forkshop is a web app for designing and forking educational workshops.  
 
 ## Usage
