@@ -5,12 +5,17 @@ var express = require('express')
   , LocalStrategy = require('passport-local').Strategy
   , passportLocalMongoose = require('passport-local-mongoose')
   , config = require('./config')
-  , database = require('./db');
+  , database = require('./db')
+  , RedisStore = require('connect-redis')(express)
+  , sessionStore = new RedisStore({ client: database.client });
+
+var courses = require('./controllers/course');
 
 /* Models represent the data your application keeps. */
 /* You'll need at least the User model if you want to 
 	allow users to login */
 User      = require('./models/User').User;
+Course    = require('./models/Course').Course;
 //Thing   = require('./models/Thing').Thing;
 
 // make the HTML output readible, for designers. :)
@@ -27,7 +32,8 @@ app.use(express.cookieParser( config.cookieSecret ));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(express.session({
-  secret: config.cookieSecret
+    store: sessionStore
+  , secret: config.cookieSecret
 }));
 
 /* Configure the registration and login system */
@@ -40,6 +46,8 @@ app.set('view engine', 'jade');
 
 /* configure some local variables for use later */
 app.use(function(req, res, next) {
+  console.log(req.user);
+
   app.locals.user = req.user;
   next();
 });
@@ -92,6 +100,11 @@ app.post('/register', function(req, res) {
 app.post('/login', passport.authenticate('local'), function(req, res) {
   res.redirect('/');
 });
+
+app.get('/courses', courses.list);
+app.get('/courses/new', courses.creationForm);
+app.post('/courses', courses.create);
+app.get('/courses/:courseID', courses.view);
 
 app.listen( config.appPort , function() {
   console.log('Demo application is now listening on http://localhost:' + config.appPort + ' ...');

@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1 Available Courses
+
+  ul
+  - for course in courses
+    li
+      a(href="/courses/#{course._id}") #{course.name}
