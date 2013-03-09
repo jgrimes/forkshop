@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 lib-cov
 *.seed
 *.log
@@ -12,3 +13,7 @@ logs
 results
 
 npm-debug.log
+=======
+*.sublime-project
+*.sublime-workspace
+>>>>>>> 43b854f4b98f880219b25009e9a29eb94b9bc7c3
