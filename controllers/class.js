@@ -136,6 +136,13 @@ module.exports = {
         });
       });
     }
+  , presentation: function(req, res, next) {
+      Class.findOne({ _id: req.param('classID') }).populate("_owner").exec(function(err, thisClass) {
+        res.render('class', { //TODO: make it go to presi
+          thisClass: thisClass
+        });
+      });
+    }
  , fork: function(req, res, next) {
     Class.findOne({ _id: req.param('classID') }).populate("_owner").exec(function(err, thisClass) {
 

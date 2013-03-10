@@ -87,7 +87,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(function(req, res, next) {
   app.locals.user = req.user;
   next();
-}); 
+});
 
 /* Configure "routes".
     "routes" are the mappings your browser/client use to
@@ -181,6 +181,7 @@ app.post('/classes/:classID/slides', classes.createSlide);
 app.get('/classes/:classID/slides/:slideID', classes.showSlide); // note: slideID is a numeric ID!
 app.get('/classes/:classID/slides/:slideID/edit', classes.editSlideForm); // note: slideID is a numeric ID!
 app.post('/classes/:classID/slides/:slideID/edit', classes.editSlide); // note: slideID is a numeric ID!
+app.get('/classes/:classID/presentation', classes.presentation);
 
 app.get('/classes/fork/:classID', classes.fork); // TODO: this should be a POST, but baby steps...
 
