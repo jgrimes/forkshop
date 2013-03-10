@@ -5,11 +5,11 @@
 
 module.exports = {
     appPort: 9200
-  , appURL: "http://localhost" // set this to the public address of your app
+  , appURL: "http://forkshop.ericmartindale.com" // set this to the public address of your app
   , cookieSecret: 'this can be any random string, you can even use this one. :)'
   , databaseName: 'forkshop'
   , github: {
-        clientID: 'da1eb6b57ba9304a33f3'
-      , clientSecret: 'e231370caa92768418b03d6a4330b29c2bd0b139'
+        clientID: '033d055c9fb974924671'
+      , clientSecret: '1b5a416c77d27101e42dc6db3a17a14b9948148c'
     }
 };
