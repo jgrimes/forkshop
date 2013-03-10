@@ -13,7 +13,7 @@ var express = require('express')
 var courses = require('./controllers/course');
 
 /* Models represent the data your application keeps. */
-/* You'll need at least the User model if you want to 
+/* You'll need at least the User model if you want to
 	allow users to login */
 User      = require('./models/User').User;
 Course    = require('./models/Course').Course;
@@ -85,7 +85,7 @@ app.use(express.static(__dirname + '/public'));
 }); */
 
 /* Configure "routes".
-    "routes" are the mappings your browser/client use to 
+    "routes" are the mappings your browser/client use to
     access the logic behind a concept.  Google "REST" to
     learn more about the principle. */
 
@@ -95,7 +95,7 @@ app.use(express.static(__dirname + '/public'));
     the [next] function. */
 app.get('/', function(req, res) {
 
-  /* in this function, render the index template, 
+  /* in this function, render the index template,
      using the [res]ponse. */
 
   if (req.user) {
@@ -148,7 +148,7 @@ app.get('/logout', function(req, res){
 
 app.get('/auth/github', passport.authenticate('github'));
 
-app.get('/auth/github/callback', 
+app.get('/auth/github/callback',
   passport.authenticate('github', { failureRedirect: '/login' }),
   function(req, res) {
     res.redirect('/');
@@ -158,6 +158,10 @@ app.get('/courses', courses.list);
 app.get('/courses/new', courses.creationForm);
 app.post('/courses', courses.create);
 app.get('/courses/:courseID', courses.view);
+app.get('/course/fork', courses.fork);// TODO: this shouldn't be a "GET", since we're doing something. POST, perhaps?
+app.get('/course/import/:courseName', courses.repoImport);
+
+//But GET was easier to test.
 
 app.listen( config.appPort , function() {
   console.log('Demo application is now listening on http://localhost:' + config.appPort + ' ...');

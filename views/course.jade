@@ -2,8 +2,10 @@ extends layout
 
 block content
   h1 Course: #{course.name}
+
   .pull-right
-    a.btn(href="#") fork
+    a.btn.btn-primary(href="#") fork
+
   p #{course.description}
 
   .row-fluid
@@ -42,3 +44,5 @@ block content
     .well {
       height: 25em;
     }
+
+  a.btn.btn-primary.pull-right fork
