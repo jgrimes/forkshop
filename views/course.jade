@@ -9,4 +9,4 @@ block content
     a.btn.pull-right(href="/course/#{course._id}/classes/new") new &raquo;
     a(href="/course/#{course._id}/classes") #{course.classes.length} Classes
 
-  a.btn.btn-primary.pull-right fork
+  a(href="/courses/fork/#{course._id}").btn.btn-primary.pull-right fork

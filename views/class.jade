@@ -4,9 +4,6 @@ block content
   h1 #{thisClass.name} 
     small a class on Coursefork
 
-  .pull-right
-    a.btn.btn-primary(href="#") fork
-
   p #{thisClass.description}
 
   h2
@@ -22,4 +19,4 @@ block content
   h2
     a(href="/classes/#{thisClass._id}/code") Code
 
-  a.btn.btn-primary.pull-right fork
+  a(href="/classes/fork/#{thisClass._id}").btn.btn-primary.pull-right fork
