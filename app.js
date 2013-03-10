@@ -14,7 +14,7 @@ var courses = require('./controllers/course');
 var classes = require('./controllers/class');
 
 /* Models represent the data your application keeps. */
-/* You'll need at least the User model if you want to 
+/* You'll need at least the User model if you want to
 	allow users to login */
 User      = require('./models/User').User;
 Course    = require('./models/Course').Course;
@@ -90,7 +90,7 @@ app.use(function(req, res, next) {
 }); 
 
 /* Configure "routes".
-    "routes" are the mappings your browser/client use to 
+    "routes" are the mappings your browser/client use to
     access the logic behind a concept.  Google "REST" to
     learn more about the principle. */
 
@@ -100,7 +100,7 @@ app.use(function(req, res, next) {
     the [next] function. */
 app.get('/', function(req, res) {
 
-  /* in this function, render the index template, 
+  /* in this function, render the index template,
      using the [res]ponse. */
 
   if (req.user) {
@@ -156,7 +156,7 @@ app.get('/logout', function(req, res){
 
 app.get('/auth/github', passport.authenticate('github'));
 
-app.get('/auth/github/callback', 
+app.get('/auth/github/callback',
   passport.authenticate('github', { failureRedirect: '/login' }),
   function(req, res) {
     res.redirect('/');
@@ -169,6 +169,7 @@ app.get('/courses/:courseID', courses.view);
 app.get('/courses/:courseID/classes', classes.listByCourse);
 app.post('/courses/:courseID/classes', courses.addClass);
 app.get('/courses/:courseID/classes/:classID', classes.view);
+app.get('/courses/fork/:courseID', courses.fork); // TODO: this should be a POST, but baby steps...
 
 app.get('/classes', classes.list);
 app.get('/classes/new', classes.creationForm);
@@ -181,6 +182,7 @@ app.get('/classes/:classID/slides/:slideID', classes.showSlide); // note: slideI
 app.get('/classes/:classID/slides/:slideID/edit', classes.editSlideForm); // note: slideID is a numeric ID!
 app.post('/classes/:classID/slides/:slideID/edit', classes.editSlide); // note: slideID is a numeric ID!
 
+app.get('/classes/fork/:classID', classes.fork); // TODO: this should be a POST, but baby steps...
 
 app.get('/courses/:courseID', courses.view);
 

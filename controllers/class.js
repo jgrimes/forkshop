@@ -76,20 +76,6 @@ module.exports = {
         res.redirect('/classes/'+thisClass._id+'/slides');
       });
     }
-  , repoImport: function(req, res) {
-      // This is for importing a repo that already exists in Github.
-      var thisClass = new Class({
-          name: req.param('className')
-        , description: req.param('description')
-        , _creator: req.user._id
-        , _owner: req.user._id
-      });
-
-      thisClass.save(function(err) {
-        res.redirect( '/classes/' + thisClass._id);
-      });
-
-    }
   , create: function(req, res) {
 
       var thisClass = new Class({
@@ -99,47 +85,49 @@ module.exports = {
         , _owner: req.user._id
       });
 
-      thisClass.save(function(err) {
-        res.redirect( '/classes/' + thisClass._id);
-      });
-
-      // save to Git...
-      console.log("creating a repo named "+thisClass.name);
-
+      //var util = require("util"); // TODO: find out why this isn't working as described. Probably something simple...
+      //var github = util.github(req.user.github.token)
       var GitHubApi = require("github");
       var github = new GitHubApi({
         // required
-        version: "3.0.0",
+        version: "3.0.0"
         // optional
-        timeout: 5000
+      , timeout: 5000
       });
-
       github.authenticate({
         //type: "oauth" // obviously, make OAuth happen here.
-        //, token: req.user.github.token // we're assuming this is here for now. Nulls? We don't handle no stinkin' nulls.
+        //, token: req.user.github.token // we're assuming this is here for now.
+        //Nulls? We don't handle no stinkin' nulls.
           type: "basic"
         , username: 'coursefork-test'
         , password: 'coursefork001'
       });
 
-     // this block is for debugging
-     //github.user.getFollowingFromUser({
-     //  user: "classfork-test"
-     //}, function(err, res) {
-     //  console.log(JSON.stringify(res));
-     //});
-
-      github.repos.create({
-        "name": thisClass.name,
-        "description": thisClass.description,
-        "homepage": "https://github.com",
-        "private": false,
-        "has_wiki": true
-      }, function(err, res) {
-        console.log("Got err?", err);
-        console.log("Got res?", res);
-      })
-
+      thisClass.save(function(err) {
+        // ok, we've saved (hopefully) to Mongo (or at least told Mongo to save; it writes asynchronously)
+        // So now make something actually happen in Git-land
+        console.log("creating a repo named "+thisClass.name);
+        // this is where we create a new class
+        var templateUser = "coursefork";
+        var templateName = "course-template";
+        github.repos.fork({
+          "user": templateUser
+          , "repo": templateName
+        }, function(forkerr, forkres) {
+          console.log("Got err?", forkerr);
+          console.log("Got res?", forkres);
+          github.repos.update({
+              "user": "coursefork-test"//TODO: when github username isn't hardcoded: thisClass._owner.github.username
+            , "repo": templateName
+            , "name": thisClass.name
+            , "description": thisClass.description
+            , "homepage": "https://coursefork.org"
+            , "private": false
+            , "has_wiki": true
+          })
+          res.redirect( '/classes/' + thisClass._id);
+        })
+     });
   }
   , view: function(req, res, next) {
       Class.findOne({ _id: req.param('classID') }).populate("_owner").exec(function(err, thisClass) {
@@ -149,48 +137,56 @@ module.exports = {
       });
     }
  , fork: function(req, res, next) {
-    console.log("Rawesome, look at me forking class "+ className+" and owner "+ classOwnerName);
-    var className = req.param('className')
-    var classOwnerName = req.param('classOwner')
-    // Holy copy-n-paste!  Crappy code!
-    var GitHubApi = require("github");
-    var github = new GitHubApi({
+    Class.findOne({ _id: req.param('classID') }).populate("_owner").exec(function(err, thisClass) {
+
+      //var util = require("util"); // sounded like a good idea...
+      //var github = util.github(req.user.github.token)
+      var GitHubApi = require("github");
+      var github = new GitHubApi({
         // required
-        version: "3.0.0",
+        version: "3.0.0"
         // optional
-        timeout: 5000
-    });
-    github.authenticate({
+      , timeout: 5000
+      });
+      github.authenticate({
         //type: "oauth" // obviously, make OAuth happen here.
-        //, token: req.user.github.token // we're assuming this is here for now. Nulls? We don't handle no stinkin' nulls.
+        //, token: req.user.github.token // we're assuming this is here for now.
+        //Nulls? We don't handle no stinkin' nulls.
           type: "basic"
-        , username: 'classfork-test'
-        , password: 'classfork001'
-    });
+        , username: 'coursefork-test'
+        , password: 'coursefork001'
+      });
 
-    // this block is for debugging
-    //github.user.getFollowingFromUser({
-    //  user: "classfork-test"
-    //}, function(err, res) {
-    //  console.log(JSON.stringify(res));
-    //});
-    console.log("So we have this class: ", className);
-    console.log("...with this owner: ", classOwnerName);
+      console.log("So we have this class: ", thisClass.name);
+      console.log("...with this owner: ", thisClass._owner.github.username);
 
-    github.repos.fork({
-        "user": classOwnerName
-      , "repo": className
-    }, function(forkerr, forkres) {
-      console.log("Oh fork:", forkerr);
-      if (forkres) {
-        // this is where we create a new class
-        console.log("forkin' A", forkres);
-        res.redirect("/class/import/"+className);
-      } else {
-        res.redirect("/error");//...or something. Whatever.
-      }
-    });
-    //TODO: redirect to a "we're forking" page, then put handlers in the fork callback to redir to success or error page.
-
+      github.repos.fork({
+          "user": "coursefork-test"//thisClass._owner.github.username
+        , "repo": thisClass.name
+      }, function(forkerr, forkres) {
+        console.log("Oh fork:", forkerr);
+        if (forkres) {
+          // this is where we create a new class
+          console.log("forkin' A", forkres);
+          // This is for importing a repo that already exists in Github.
+          var newClass = new Class({
+              name: thisClass.name
+            , description: thisClass.description
+            , creator: thisClass._creator
+            , _owner: thisClass._owner
+          });
+          thisClass.save(function(err) {
+            if (err) {
+               console.log("Error!!!!");
+               console.log(err);
+            }
+            res.redirect( '/classes/' + newClass._id);
+          });
+        } else {
+          res.redirect("/error");//...or something. Whatever.
+        }
+      });
+      //TODO: redirect to a "we're forking" page, then put handlers in the fork callback to redir to success or error page.
+   });
  }
 }
