@@ -12,6 +12,10 @@ var ClassSchema = new Schema({
   , _owner: { type: ObjectId, ref: 'User' }
 });
 
+// This could be so cool...instead of having this hardcoded model, we could just look at the directories and dynamically render
+// whatever we have in the top-level directories, based on rendering instructions within the directories themselves...
+// But alas, it's not going to happen right away.
+//
 ClassSchema.virtual('slides').get(function () {
   // TODO: GET THIS FROM GITHUB!!!
   // alternatively, store / track it when we create it?
