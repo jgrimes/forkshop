@@ -11,6 +11,7 @@ var express = require('express')
   , sessionStore = new RedisStore({ client: database.client });
 
 var courses = require('./controllers/course');
+var classes = require('./controllers/class');
 
 /* Models represent the data your application keeps. */
 /* You'll need at least the User model if you want to 
@@ -103,9 +104,12 @@ app.get('/', function(req, res) {
 
   if (req.user) {
     Course.find({ _owner: req.user._id }).exec(function(err, courses) {
-      res.render('home', {
-          user: req.user
-        , courses: courses
+      Class.find({ _owner: req.user._id }).exec(function(err, classes) {
+        res.render('home', {
+            user: req.user
+          , courses: courses
+          , classes: classes
+        });
       });
     });
   } else {
@@ -161,11 +165,14 @@ app.get('/courses', courses.list);
 app.get('/courses/new', courses.creationForm);
 app.post('/courses', courses.create);
 app.get('/courses/:courseID', courses.view);
+app.get('/courses/:courseID/classes', classes.listByCourse);
+app.post('/courses/:courseID/classes', courses.addClass);
+app.get('/courses/:courseID/classes/:classID', classes.view);
 
 app.get('/classes', classes.list);
 app.get('/classes/new', classes.creationForm);
 app.post('/classes', classes.create);
-app.get('/classes/:classeID', classes.view);
+app.get('/classes/:classID', classes.view);
 
 
 app.get('/courses/:courseID', courses.view);

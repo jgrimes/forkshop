@@ -6,36 +6,51 @@ module.exports = {
         });
       });
     }
+  , listByCourse: function(req, res) {
+      Course.findOne({ _id: req.param('courseID') }).exec(function(err, course) {
+        Class.find({ _id: { $in: course.classes.map(function(courseClass) {
+          return courseClass._class;
+        })  }}).exec(function(err, classes) {
+
+          res.render('classes', {
+              course: course
+            , classes: classes
+          });
+        });
+      });
+    }
   , creationForm: function(req, res) {
       res.render('class-create');
     }
   , repoImport: function(req, res) {
       // This is for importing a repo that already exists in Github.
-      var class = new Class({
+      var thisClass = new Class({
           name: req.param('className')
         , description: req.param('description')
-        //, _creator: req.user._id
+        , _creator: req.user._id
+        , _owner: req.user._id
       });
 
-      class.save(function(err) {
-        res.redirect( '/classes/' + class._id);
+      thisClass.save(function(err) {
+        res.redirect( '/classes/' + thisClass._id);
       });
 
     }
   , create: function(req, res) {
 
-      var class = new Class({
+      var thisClass = new Class({
           name: req.param('name')
         , description: req.param('description')
-        //, _creator: req.user._id
+        , _creator: req.user._id
+        , _owner: req.user._id
       });
 
-      class.save(function(err) {
-        res.redirect( '/classes/' + class._id);
+      thisClass.save(function(err) {
+        res.redirect( '/classes/' + thisClass._id);
       });
 
       // save to Git...
-      console.log("creating a repo named "+class.name);
+      console.log("creating a repo named "+thisClass.name);
 
       var GitHubApi = require("github");
       var github = new GitHubApi({
@@ -61,8 +76,8 @@ module.exports = {
      //});
 
       github.repos.create({
-        "name": class.name,
-        "description": class.description,
+        "name": thisClass.name,
+        "description": thisClass.description,
         "homepage": "https://github.com",
         "private": false,
         "has_wiki": true
@@ -73,14 +88,10 @@ module.exports = {
 
   }
   , view: function(req, res, next) {
-      Class.findOne({ _id: req.param('classID') }).populate("_owner").exec(function(err, class) {
-        if (!class) {
-          next();
-        } else {
-          res.render('class', {
-            class: class
-          });
-        }
+      Class.findOne({ _id: req.param('classID') }).populate("_owner").exec(function(err, thisClass) {
+        res.render('class', {
+          thisClass: thisClass
+        });
       });
     }
  , fork: function(req, res, next) {

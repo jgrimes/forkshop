@@ -9,10 +9,7 @@ block content
   p #{course.description}
 
   h2
-    a.btn.pull-right(href="#") add &raquo;
-    a(href="/classes/#{class._id}/slides") (count here) Slides
-
-  h2
-    a(href="/classes/#{class._id}/code") Code
+    a.btn.pull-right(href="/course/#{course._id}/classes/new") new &raquo;
+    a(href="/course/#{course._id}/classes") #{course.classes.length} Classes
 
   a.btn.btn-primary.pull-right fork

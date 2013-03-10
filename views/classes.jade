@@ -1,10 +1,14 @@
 extends layout
 
 block content
-  a.btn.pull-right(href="/courses/new") Create &raquo;
-  h1 Available Courses
+  a.btn.pull-right(href="/classes/new") Create &raquo;
+
+  - if (typeof(course) != 'undefined')
+    h1 Classes in #{course.name}
+  - else
+    h1 Classes
 
   ul
-  - for course in courses
+  - for thisClass in classes
     li
-      a(href="/courses/#{course._id}") #{course.name}
+      a(href="/classes/#{thisClass._id}") #{thisClass.name}

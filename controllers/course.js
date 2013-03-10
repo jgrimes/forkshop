@@ -27,7 +27,8 @@ module.exports = {
       var course = new Course({
           name: req.param('name')
         , description: req.param('description')
-        //, _creator: req.user._id
+        , _creator: req.user._id
+        , _owner: req.user._id
       });
 
       course.save(function(err) {
@@ -82,7 +83,20 @@ module.exports = {
         }
       });
     }
- , fork: function(req, res, next) {
+  , addClass: function(req, res) {
+      Course.findOne({ _id: req.param('courseID') }).exec(function(err, course) {
+        Class.findOne({ _id: req.param('classID') }).exec(function(err, thisClass) {
+          course.classes.push({
+            _class: thisClass._id
+          });
+
+          course.save(function() {
+            res.redirect('/courses/' + course._id);
+          });
+        });
+      });
+    }
+  , fork: function(req, res, next) {
     console.log("Rawesome, look at me forking course "+ courseName+" and owner "+ courseOwnerName);
     var courseName = req.param('courseName')
     var courseOwnerName = req.param('courseOwner')
