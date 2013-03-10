@@ -23,12 +23,12 @@ ClassSchema.virtual('slides').get(function () {
       { name: 'Introduction',         content: 'foo' }
     , { name: 'What\'s the problem?', content: 'foo' }
     , { name: 'Teaching',             content: 'foo' }
-    , { name: 'Collaboration',   content: 'foo' }
-    , { name: 'The Solution',   content: 'foo' }
-    , { name: 'Open Source',   content: 'foo' }
-    , { name: 'RedHat',   content: 'foo' }
-    , { name: 'GitHub',   content: 'foo' }
-    , { name: 'Questions?',   content: 'foo' }
+    , { name: 'Collaboration',        content: 'foo' }
+    , { name: 'The Solution',         content: 'foo' }
+    , { name: 'Open Source',          content: 'foo' }
+    , { name: 'RedHat',               content: 'foo' }
+    , { name: 'GitHub',               content: 'foo' }
+    , { name: 'Questions?',           content: 'foo' }
   ];
 });
 
