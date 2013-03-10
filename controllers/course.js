@@ -40,9 +40,9 @@ module.exports = {
       var GitHubApi = require("github");
       var github = new GitHubApi({
         // required
-        version: "3.0.0",
+        version: "3.0.0"
         // optional
-        timeout: 5000
+      , timeout: 5000
       });
       github.authenticate({
         //type: "oauth" // obviously, make OAuth happen here.
@@ -68,7 +68,9 @@ module.exports = {
       }, function(err, res) {
         console.log("Got err?", err);
         console.log("Got res?", res);
+
       })
+
 
   }
   , view: function(req, res, next) {

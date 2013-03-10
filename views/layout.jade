@@ -4,9 +4,11 @@ html
     title Startup Weekend Web App Template
     link(rel='stylesheet', href='/css/bootstrap.min.css')
     link(rel='stylesheet', href='/css/screen.css')
+    link(rel='stylesheet', href='/css/bme-editor.css')
 
     script(src='//code.jquery.com/jquery.min.js')
     script(src='/js/bootstrap.min.js')
+    script(src='/js/markdown.js')
 
   body
 
@@ -14,8 +16,6 @@ html
       .navbar-inner
         .container
           ul.nav
-            li
-              a.brand(href="/") #SWEDU
             li
               a(href="/") Home
 
@@ -31,6 +31,9 @@ html
                 a(href="/logout") Log Out
             else
               li
+                .started
+                  a.btn(href="/auth/github") Get Started &raquo;
+              li
                 a(href="/login") Log In
 
 
@@ -42,4 +45,4 @@ html
 
     .container
       footer
-        small &copy; No one in particular...
+        small &copy; 2013 Coursefork
