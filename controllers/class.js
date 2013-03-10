@@ -32,9 +32,12 @@ module.exports = {
     }
   , showSlide: function(req, res) {
       Class.findOne({ _id: req.param('classID') }).exec(function(err, thisClass) {
+        var slide = thisClass.slides[ req.param('slideID') - 1 ];
+        slide.id = req.param('slideID');
+
         res.render('slide', {
             thisClass: thisClass
-          , slide: thisClass.slides[ req.param('slideID') - 1 ]
+          , slide: slide
         });
       });
     }

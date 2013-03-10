@@ -181,7 +181,6 @@ app.get('/classes/:classID/slides/:slideID/edit', classes.editSlideForm); // not
 app.post('/classes/:classID/slides/:slideID/edit', classes.editSlide); // note: slideID is a numeric ID!
 
 
-
 app.get('/courses/:courseID', courses.view);
 
 app.listen( config.appPort , function() {

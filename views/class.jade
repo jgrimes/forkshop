@@ -11,7 +11,13 @@ block content
 
   h2
     a.btn.pull-right(href="/classes/#{thisClass._id}/slides/new") add &raquo;
-    a(href="/classes/#{thisClass._id}/slides") (count here) Slides
+    a(href="/classes/#{thisClass._id}/slides") #{thisClass.slides.length} Slides
+
+  ol
+    - for slide, i in thisClass.slides
+      li(style="clear:both;")
+        a.btn.btn-micro.pull-right(href="/classes/#{thisClass._id}/slides/#{i + 1}/edit") edit
+        a(href="/classes/#{thisClass._id}/slides/#{i + 1}") slide: #{slide.name}
 
   h2
     a(href="/classes/#{thisClass._id}/code") Code
