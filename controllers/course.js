@@ -126,7 +126,7 @@ module.exports = {
         res.redirect("/error");//...or something. Whatever.
       }
     });
-    //TODO: redirect to a "we're forking" page, then put handlers in the fork callback to redir to success or error page.
+    //TODO: redirect to a "we're forking" page, then put handlers in the fork callback to redir to the forked repo on soccess, or an error page on...well, you know.
 
  }
 }
