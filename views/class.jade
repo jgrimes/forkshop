@@ -36,7 +36,7 @@ block content
         a.btn.pull-right(href="/classes/#{thisClass._id}/slides/new") add &raquo;
         a(href="/classes/#{thisClass._id}/slides") #{thisClass.slides.length} Slides
 
-      ol.nav.nav-tabs.nav-stacked
+      ol
         - for slide, i in thisClass.slides
           li(style="clear:both;")
             a.btn.btn-micro.pull-right(href="/classes/#{thisClass._id}/slides/#{i + 1}/edit") edit
@@ -45,10 +45,20 @@ block content
       h2(style="margin-top: 2em;")
         a.btn.pull-right(href="/classes/#{thisClass._id}/slides/new") add &raquo;
 
-    .span8(style="height: 25em; text-align:center; padding-top: 7.5em; border: 1px solid black; border-radius: 3px;")
-      h1 SLIDE PREVIEW
+    .span8
+      #preview(style="height: 25em; text-align:center; padding-top: 5.5em; border: 1px solid black; border-radius: 3px;")
+        h1 Building an MVP in 48 Hours
+        h2 or, Ideation at Ludicrous Speed
+
+        p.pull-right(style="padding-top: 2em; padding-right: 2em;") an experiment by the coursefork team.
+
+      .controls(style="margin-top: 1em;")
+        a.btn.pull-right Next &raquo;
+        a.btn &laquo; Previous
 
   h2
     a(href="/classes/#{thisClass._id}/code") Code, Files, & Resources
+    |  
+    a.btn Upload New &raquo;
 
-  a.btn.btn-primary.pull-right fork
+  p No files have been uploaded to this class yet!
