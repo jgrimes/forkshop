@@ -5,11 +5,11 @@ body {
   padding-top: 60px;
   padding-bottom: 40px;
   background-color: #eaeaea;
-  font-family: Gulim; Arial; 
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h3 {
-	font-size: 20px;
+	font-size: 22px;
 }
 
 footer {
@@ -43,16 +43,12 @@ footer {
 
 .navbar-inverse .brand,
 .navbar-inverse .nav > li > a {
-  color: #dddddd;
+  color: #2e333a;
 }
 
 .navbar-inverse .navbar-inner {
-  background-color: #87a5d0;
-  border-color: #87a5d0;
-}
-
-.navbar-inverse .brand {
-	color: #cccccc;
+  background-color: #c9deff;
+  border-color: #c9deff;
 }
 
 .titleimg {
@@ -68,12 +64,19 @@ footer {
 	width: 100%;
 }
 
+
 .spanimg {
 	text-align: center;
-	height: 200px;
+	height: 220px;
+	vertical-align: middle;
 }
 
 .span4 h3 {
 	text-align: center;
+}
+
+.span4 p {
+	margin-top: 20px;
+	font-size: 20px;
 }
 

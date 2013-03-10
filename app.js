@@ -173,6 +173,13 @@ app.get('/classes', classes.list);
 app.get('/classes/new', classes.creationForm);
 app.post('/classes', classes.create);
 app.get('/classes/:classID', classes.view);
+app.get('/classes/:classID/slides', classes.showSlides);
+app.get('/classes/:classID/slides/new', classes.createSlideForm);
+app.post('/classes/:classID/slides', classes.createSlide);
+app.get('/classes/:classID/slides/:slideID', classes.showSlide); // note: slideID is a numeric ID!
+app.get('/classes/:classID/slides/:slideID/edit', classes.editSlideForm); // note: slideID is a numeric ID!
+app.post('/classes/:classID/slides/:slideID/edit', classes.editSlide); // note: slideID is a numeric ID!
+
 
 
 app.get('/courses/:courseID', courses.view);

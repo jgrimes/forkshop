@@ -12,6 +12,17 @@ var ClassSchema = new Schema({
   , _owner: { type: ObjectId, ref: 'User' }
 });
 
+ClassSchema.virtual('slides').get(function () {
+  // TODO: GET THIS FROM GITHUB!!!
+  // alternatively, store / track it when we create it?
+  return [ 
+      { name: 'Introduction', content: 'foo' }
+    , { name: 'Why?',         content: 'foo' }
+    , { name: 'Solution',     content: 'foo' }
+    , { name: 'Questions?',   content: 'foo' }
+  ];
+});
+
 // attach the passport fields to the model
 ClassSchema.plugin(passportLocalMongoose);
 
