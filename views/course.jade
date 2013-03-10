@@ -3,10 +3,13 @@ extends layout
 block content
   h1 Course: #{course.name}
 
+  .pull-right
+    a.btn.btn-primary(href="#") fork
+
   p #{course.description}
 
   h2
     a.btn.pull-right(href="/course/#{course._id}/classes/new") new &raquo;
     a(href="/course/#{course._id}/classes") #{course.classes.length} Classes
 
-  a(href="/courses/fork/#{course._id}").btn.btn-primary.pull-right fork
+  a.btn.btn-primary.pull-right fork

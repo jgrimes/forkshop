@@ -19,7 +19,7 @@
    sodipodi:docname="Human-dialog-info.svg"><metadata
    id="metadata290"><rdf:RDF><cc:Work
        rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
    id="defs288" /><sodipodi:namedview
    pagecolor="#ffffff"
    bordercolor="#666666"
@@ -34,31 +34,43 @@
    id="namedview286"
    showgrid="false"
    inkscape:zoom="2.2357247"
-   inkscape:cx="155.03298"
+   inkscape:cx="137.14169"
    inkscape:cy="112.12277"
-   inkscape:window-x="110"
-   inkscape:window-y="0"
+   inkscape:window-x="8"
+   inkscape:window-y="59"
    inkscape:window-maximized="0"
    inkscape:current-layer="Layer_1" />
 	<path
    fill="#9E8C68"
    d="M64.5,7C45.476,7,30,22.971,30,42.601c0,12.266,7.869,23.842,13.614,32.293   c3.229,4.752,6.019,9.055,6.019,11.306h0.992C50.443,79.295,31,61.623,31,42.601C31,23.491,45.998,8,64.5,8   C83.001,8,98,23.491,98,42.601C98,61.604,78.595,80.566,78.376,86.2h0.99c0-1.62,2.477-5.484,5.345-9.727   C90.742,67.555,99,55.34,99,42.601C99,22.971,83.523,7,64.5,7z"
    id="path42"
-   style="fill:#e6e6e6;stroke-width:0.80000000000000004;stroke-miterlimit:4;stroke-dasharray:none;stroke:#999999" /><path
+   style="fill:#e6e6e6;stroke-width:0.80000000000000004;stroke-miterlimit:4;stroke-dasharray:none;stroke:#999999"
+   inkscape:export-filename="/Users/elliott/git/forkshop/images/bulb200px.png"
+   inkscape:export-xdpi="150"
+   inkscape:export-ydpi="150" /><path
    d="M64.5,6C44.925,6,29,22.419,29,42.601c0,12.568,7.966,24.409,13.782,33.053   c3.009,4.473,5.851,8.697,5.851,10.646c0,1.104,0.896,2,2,2h27.734c1.104,0,2-0.896,2-2c0-1.32,2.752-5.432,5.179-9.059   C91.301,68.641,100,55.641,100,42.601C100,22.419,84.074,6,64.5,6z M78.367,86.301H50.632c0-6.837-19.633-24.589-19.633-43.7   S45.998,8,64.5,8C83.001,8,98,23.491,98,42.601S78.367,80.787,78.367,86.301z"
    id="path30"
    fill="#FF8B17"
    opacity="0.4"
-   style="fill:#e6e6e6" /><path
+   style="fill:#e6e6e6"
+   inkscape:export-filename="/Users/elliott/git/forkshop/images/bulb200px.png"
+   inkscape:export-xdpi="150"
+   inkscape:export-ydpi="150" /><path
    opacity="0.2"
    fill="#141414"
    d="M83.916,98.452c-0.162-0.937-0.771-1.698-1.572-2.136v-2.172   c1.118-0.568,1.795-1.779,1.572-3.064c-0.163-0.939-0.774-1.702-1.578-2.139C82.304,87.868,81.422,87,80.343,87H49.676   c-1.1,0-2,0.9-2,2v4.275l-0.075,0.01c-1.665,0.24-2.797,1.759-2.517,3.377c0.226,1.305,1.309,2.276,2.591,2.483v1.501l-0.075,0.012   c-1.665,0.238-2.797,1.758-2.517,3.375c0.226,1.305,1.309,2.277,2.591,2.484v1.502l-0.075,0.01   c-1.665,0.24-2.797,1.759-2.517,3.377c0.24,1.385,1.444,2.404,2.83,2.52c0.336,0.635,0.997,1.074,1.761,1.074h1.802   c2.206,5.476,7.203,10,13.022,10c5.82,0,10.816-4.524,13.022-10h2.821c1.1,0,2-0.9,2-2v-4.111c1.118-0.568,1.795-1.779,1.572-3.064   c-0.162-0.937-0.771-1.698-1.572-2.136v-2.171C83.461,100.949,84.138,99.737,83.916,98.452z"
-   id="path3" />
+   id="path3"
+   inkscape:export-filename="/Users/elliott/git/forkshop/images/bulb200px.png"
+   inkscape:export-xdpi="150"
+   inkscape:export-ydpi="150" />
 	<path
    opacity="0.2"
    fill="#141414"
    d="M83.916,99.452c-0.162-0.937-0.771-1.698-1.572-2.136v-2.172   c1.118-0.568,1.795-1.779,1.572-3.064c-0.163-0.939-0.774-1.702-1.578-2.139C82.304,88.868,81.422,88,80.343,88H49.676   c-1.1,0-2,0.9-2,2v4.275l-0.075,0.01c-1.665,0.24-2.797,1.759-2.517,3.377c0.226,1.305,1.309,2.276,2.591,2.483v1.501l-0.075,0.012   c-1.665,0.238-2.797,1.758-2.517,3.375c0.226,1.305,1.309,2.277,2.591,2.484v1.502l-0.075,0.01   c-1.665,0.24-2.797,1.759-2.517,3.377c0.24,1.385,1.444,2.404,2.83,2.52c0.336,0.635,0.997,1.074,1.761,1.074h1.802   c2.206,5.476,7.203,10,13.022,10c5.82,0,10.816-4.524,13.022-10h2.821c1.1,0,2-0.9,2-2v-4.111c1.118-0.568,1.795-1.779,1.572-3.064   c-0.162-0.937-0.771-1.698-1.572-2.136v-2.171C83.461,101.949,84.138,100.737,83.916,99.452z"
-   id="path5" />
+   id="path5"
+   inkscape:export-filename="/Users/elliott/git/forkshop/images/bulb200px.png"
+   inkscape:export-xdpi="150"
+   inkscape:export-ydpi="150" />
 	
 		<radialGradient
    id="XMLID_10_"
@@ -106,7 +118,10 @@
    fill="#CBA572"
    d="M70.083,51.86v13.954c0,1.533-1.258,2.79-2.792,2.79h-5.583c-1.535,0-2.792-1.257-2.792-2.79V51.86h-2.792   v13.954c0,3.069,2.512,5.581,6.583,5.581V88.14h3.583V71.396c4.071,0,6.583-2.512,6.583-5.581V51.86H70.083z"
    id="path34"
-   style="stroke:#b3b3b3;fill:#c8c4b7" />
+   style="stroke:#b3b3b3;fill:#c8c4b7"
+   inkscape:export-filename="/Users/elliott/git/forkshop/images/bulb200px.png"
+   inkscape:export-xdpi="150"
+   inkscape:export-ydpi="150" />
 	
 	<radialGradient
    id="light_1_"
@@ -130,7 +145,10 @@
    fill="#966746"
    d="M82,112c0,1.1-0.9,2-2,2H50c-1.1,0-2-0.9-2-2V88c0-1.1,0.9-2,2-2h30c1.1,0,2,0.9,2,2V112z"
    id="path44"
-   style="fill:#4d4d4d" />
+   style="fill:#4d4d4d"
+   inkscape:export-filename="/Users/elliott/git/forkshop/images/bulb200px.png"
+   inkscape:export-xdpi="150"
+   inkscape:export-ydpi="150" />
 	<linearGradient
    id="XMLID_1_"
    gradientUnits="userSpaceOnUse"
@@ -163,7 +181,10 @@
    fill="url(#XMLID_1_)"
    d="M82,111c0,1.65-1.35,3-3,3H51c-1.65,0-3-1.35-3-3V90c0-1.65,1.35-3,3-3h28c1.65,0,3,1.35,3,3V111z"
    id="path57"
-   style="fill:#4d4d4d" />
+   style="fill:#4d4d4d"
+   inkscape:export-filename="/Users/elliott/git/forkshop/images/bulb200px.png"
+   inkscape:export-xdpi="150"
+   inkscape:export-ydpi="150" />
 	<linearGradient
    id="XMLID_2_"
    gradientUnits="userSpaceOnUse"
@@ -188,7 +209,10 @@
    fill="url(#XMLID_2_)"
    d="M83.542,90.08c0.274,1.617-0.836,3.137-2.468,3.376l-32.147,4.712   c-1.632,0.238-3.193-0.889-3.468-2.506c-0.275-1.618,0.836-3.137,2.468-3.377l32.147-4.711   C81.706,87.336,83.267,88.463,83.542,90.08z"
    id="path66"
-   style="fill:#b3b3b3" />
+   style="fill:#b3b3b3"
+   inkscape:export-filename="/Users/elliott/git/forkshop/images/bulb200px.png"
+   inkscape:export-xdpi="150"
+   inkscape:export-ydpi="150" />
 	
 		<linearGradient
    id="XMLID_3_"
@@ -215,7 +239,10 @@
    fill="url(#XMLID_3_)"
    d="M83.542,97.452c0.274,1.618-0.836,3.137-2.468,3.376l-32.147,4.711   c-1.632,0.24-3.193-0.888-3.468-2.506c-0.275-1.617,0.836-3.137,2.468-3.375l32.147-4.711   C81.706,94.707,83.267,95.835,83.542,97.452z"
    id="path75"
-   style="fill:#b3b3b3" />
+   style="fill:#b3b3b3"
+   inkscape:export-filename="/Users/elliott/git/forkshop/images/bulb200px.png"
+   inkscape:export-xdpi="150"
+   inkscape:export-ydpi="150" />
 	<linearGradient
    id="XMLID_4_"
    gradientUnits="userSpaceOnUse"
@@ -240,7 +267,10 @@
    fill="url(#XMLID_4_)"
    d="M83.542,104.824c0.274,1.617-0.836,3.137-2.468,3.376l-32.147,4.712   c-1.632,0.238-3.193-0.889-3.468-2.506c-0.275-1.618,0.836-3.137,2.468-3.377l32.147-4.711   C81.706,102.08,83.267,103.207,83.542,104.824z"
    id="path84"
-   style="fill:#b3b3b3" />
+   style="fill:#b3b3b3"
+   inkscape:export-filename="/Users/elliott/git/forkshop/images/bulb200px.png"
+   inkscape:export-xdpi="150"
+   inkscape:export-ydpi="150" />
 	<linearGradient
    id="XMLID_5_"
    gradientUnits="userSpaceOnUse"
@@ -654,12 +684,18 @@
 	<path
    fill="#3F3F3F"
    d="M52.118,115H76.88c0.098-0.328,0.185-0.662,0.258-1H51.861C51.934,114.338,52.021,114.672,52.118,115z"
-   id="path284" />
+   id="path284"
+   inkscape:export-filename="/Users/elliott/git/forkshop/images/bulb200px.png"
+   inkscape:export-xdpi="150"
+   inkscape:export-ydpi="150" />
 <path
    style="opacity:0.2;fill:#ffbf61"
    inkscape:connector-curvature="0"
    d="m 78.56168,85.936157 h -27.735 c 0,-6.837 -19.633,-24.589 -19.633,-43.7 0,-19.111 14.999,-34.6009992 33.501,-34.6009992 18.501,0 33.5,15.4909992 33.5,34.6009992 0,19.11 -19.633,38.186 -19.633,43.7 z"
-   id="path4456" /><ellipse
+   id="path4456"
+   inkscape:export-filename="/Users/elliott/git/forkshop/images/bulb200px.png"
+   inkscape:export-xdpi="150"
+   inkscape:export-ydpi="150" /><ellipse
    d="M 124.625,44.278999 C 124.625,77.48015 97.706121,104.395 64.5,104.395 31.293879,104.395 4.375,77.48015 4.375,44.278999 c 0,-33.20115 26.918879,-60.116001 60.125,-60.116001 33.206121,0 60.125,26.914851 60.125,60.116001 z"
    sodipodi:ry="60.116001"
    sodipodi:rx="60.125"

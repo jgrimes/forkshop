@@ -20,11 +20,18 @@ html
               a(href="/")
                 img(src="/img/coursefork.png", style="max-height: 1.4em; vertical-align: top;")
             li
-              a(href="/") Home
+              a(href="/")
+                i.icon-home.icon-white
+                |  Home
+            li
+              a(href="/library")
+                i.icon-book.icon-white
+                |  Library 
 
-            if (typeof(user) == 'undefined')
-              li
-                a(href="/about") About
+            li
+              a(href="/about")
+                i.icon-question-sign.icon-white
+                |  About
 
           ul.nav.pull-right
             if (typeof(user) != 'undefined')
