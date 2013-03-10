@@ -1,12 +1,3 @@
-extends layout
-
-block content
-  h1 Course: #{course.name}
-        a.btn.btn-primary.pull-right fork
-
-  p #{course.description}
-
-
   .row-fluid
     .span6
       .wmd-panel(style="height: 5em;")
@@ -29,6 +20,7 @@ block content
               button#bme-redo-button.btn(style='display: none;', title='Redo - Ctrl+Shift+Z', disabled='') Redo
 
       textarea#bme-input.editable.well(style="box-sizing: border-box; width: 100%;")
+        #{slide.content}
 
     .span6
       .spacer(style="height: 5em;")
