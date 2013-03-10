@@ -24,6 +24,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -40,9 +41,9 @@
      inkscape:window-height="480"
      id="namedview26"
      showgrid="false"
-     inkscape:zoom="11.660895"
-     inkscape:cx="66.669134"
-     inkscape:cy="39.226988"
+     inkscape:zoom="3.12"
+     inkscape:cx="41.017872"
+     inkscape:cy="39.220965"
      inkscape:window-x="249"
      inkscape:window-y="204"
      inkscape:window-maximized="0"
@@ -151,10 +152,16 @@
   <path
      d="M 71.624263,35.263754 C 71.628638,53.727374 56.662145,68.697415 38.198526,68.697415 C 19.734897,68.697415 4.768404,53.727374 4.7727784,35.263754 C 4.768404,16.800135 19.734897,1.8300938 38.198526,1.8300938 C 56.662145,1.8300938 71.628638,16.800135 71.624263,35.263754 z "
      style="fill:#ffeeaa;fill-opacity:1;stroke:#f9f9f9;stroke-width:0.84484588999999999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     id="path2374" />
+     id="path2374"
+     inkscape:export-filename="/Users/elliott/git/forkshop/images/Awards200px.png.png"
+     inkscape:export-xdpi="265.92999"
+     inkscape:export-ydpi="265.92999" />
   <path
      d="M 44.919848,44.720203 L 33.514247,36.808643 L 22.056744,44.64485 L 26.056561,31.352672 L 15.063321,22.877461 L 28.940945,22.574004 L 33.604252,9.4998272 L 38.181279,22.604458 L 52.056601,22.999384 L 41.007735,31.401949 L 44.919848,44.720203 z "
      transform="translate(3.9928753,7.7861068)"
      style="opacity:1;fill:#ffcc00;fill-opacity:1"
-     id="path2188" />
+     id="path2188"
+     inkscape:export-filename="/Users/elliott/git/forkshop/images/Awards200px.png.png"
+     inkscape:export-xdpi="265.92999"
+     inkscape:export-ydpi="265.92999" />
 </svg>

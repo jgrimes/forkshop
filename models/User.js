@@ -7,7 +7,7 @@ var mongoose = require('mongoose')
 // and moreover, their type.
 var UserSchema = new Schema({
     username: { type: String, required: true }
-  , email: { type: String }
+  , email: { type: String, required: true }
   , created: { type: Date, required: true, default: Date.now }
   , github: {
         id: { type: Number, unique: true }
