@@ -123,6 +123,10 @@ app.get('/login', function(req, res) {
   res.render('login');
 });
 
+app.get('/about', function(req, res) {
+  res.render('about');
+});
+
 /* when a POST request is made to '/register'... */
 app.post('/register', function(req, res) {
   User.register(new User({ email : req.body.email, username : req.body.username }), req.body.password, function(err, user) {
