@@ -5,11 +5,11 @@ body {
   padding-top: 60px;
   padding-bottom: 40px;
   background-color: #eaeaea;
-  font-family: Gulim; Arial; 
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h3 {
-	font-size: 20px;
+	font-size: 22px;
 }
 
 footer {
@@ -70,10 +70,16 @@ footer {
 
 .spanimg {
 	text-align: center;
-	height: 200px;
+	height: 220px;
+	vertical-align: middle;
 }
 
 .span4 h3 {
 	text-align: center;
+}
+
+.span4 p {
+	margin-top: 20px;
+	font-size: 20px;
 }
 
