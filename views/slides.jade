@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1 Slides in #{thisClass.name}
+
+  ol
+    - for slide, i in thisClass.slides
+      li(style="clear:both;")
+        a.btn.btn-micro.pull-right(href="/classes/#{thisClass._id}/slides/#{i + 1}/edit") edit
+        a(href="/classes/#{thisClass._id}/slides/#{i + 1}") slide: #{slide.name}

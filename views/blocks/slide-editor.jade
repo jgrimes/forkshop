@@ -1,37 +1,37 @@
-  .row-fluid
-    .span6
-      .wmd-panel(style="height: 5em;")
-        #bme-button-bar
-          #bme-button-row.bme-toolbar
-            #bme-button-group1.btn-group.bme-btn-group1(style='float: left;')
-              button#bme-bold-button.btn(style='display: none;', title='Bold - Ctrl+B') Bold
-              button#bme-italic-button.btn(style='display: none;', title='Italic - Ctrl+I') Italic
-            #bme-button-group2.btn-group.bme-btn-group2(style='float: left;')
-              button#bme-link-button.btn(style='display: none;', title='Link - Ctrl+L') Link
-              button#bme-quote-button.btn(style='display: none;', title='Blockquote - Ctrl+Q') Quote
-              button#bme-code-button.btn(style='display: none;', title='Code Sample - Ctrl+K') Code
-            #bme-button-group3.btn-group.bme-btn-group3(style='float: left;')
-              button#bme-olist-button.btn(style='display: none;', title='Numbered List - Ctrl+O') Number
-              button#bme-ulist-button.btn(style='display: none;', title='Bulleted List - Ctrl+U') Bulleted
-              button#bme-heading-button.btn(style='display: none;', title='Heading - Ctrl+H') Heading
-              button#bme-hr-button.btn(style='display: none;', title='Horizontal Rule - Ctrl+R') Rule
-            #bme-button-group4.btn-group.bme-btn-group4(style='float: left;')
-              button#bme-undo-button.btn(style='display: none;', title='Undo - Ctrl+Z', disabled='') Undo
-              button#bme-redo-button.btn(style='display: none;', title='Redo - Ctrl+Shift+Z', disabled='') Redo
+.row-fluid
+  .span6
+    .wmd-panel(style="height: 5em;")
+      #bme-button-bar
+        #bme-button-row.bme-toolbar
+          #bme-button-group1.btn-group.bme-btn-group1(style='float: left;')
+            button#bme-bold-button.btn(style='display: none;', title='Bold - Ctrl+B') Bold
+            button#bme-italic-button.btn(style='display: none;', title='Italic - Ctrl+I') Italic
+          #bme-button-group2.btn-group.bme-btn-group2(style='float: left;')
+            button#bme-link-button.btn(style='display: none;', title='Link - Ctrl+L') Link
+            button#bme-quote-button.btn(style='display: none;', title='Blockquote - Ctrl+Q') Quote
+            button#bme-code-button.btn(style='display: none;', title='Code Sample - Ctrl+K') Code
+          #bme-button-group3.btn-group.bme-btn-group3(style='float: left;')
+            button#bme-olist-button.btn(style='display: none;', title='Numbered List - Ctrl+O') Number
+            button#bme-ulist-button.btn(style='display: none;', title='Bulleted List - Ctrl+U') Bulleted
+            button#bme-heading-button.btn(style='display: none;', title='Heading - Ctrl+H') Heading
+            button#bme-hr-button.btn(style='display: none;', title='Horizontal Rule - Ctrl+R') Rule
+          #bme-button-group4.btn-group.bme-btn-group4(style='float: left;')
+            button#bme-undo-button.btn(style='display: none;', title='Undo - Ctrl+Z', disabled='') Undo
+            button#bme-redo-button.btn(style='display: none;', title='Redo - Ctrl+Shift+Z', disabled='') Redo
 
-      textarea#bme-input.editable.well(style="box-sizing: border-box; width: 100%;")
-        #{slide.content}
+    textarea#bme-input.editable.well(style="box-sizing: border-box; width: 100%;")
+      !{slide.content}
 
-    .span6
-      .spacer(style="height: 5em;")
-      #bme-preview.well
+  .span6
+    .spacer(style="height: 5em;")
+    #bme-preview.well
 
-  script
-    var converter = Markdown.getSanitizingConverter();
-    var editor = new Markdown.Editor(converter);
-    editor.run();
+script
+  var converter = Markdown.getSanitizingConverter();
+  var editor = new Markdown.Editor(converter);
+  editor.run();
 
-  style
-    .well {
-      height: 25em;
-    }
+style
+  .well {
+    height: 25em;
+  }

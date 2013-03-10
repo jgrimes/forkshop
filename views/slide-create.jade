@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1 Creating a new slide in #{thisClass.name}
+
+  form(action="/classes/#{thisClass._id}/slides", method="POST")
+
+    include blocks/slide-editor
+
+    input.btn.btn-primary.pull-right(type="submit", value="Add this Slide &raquo;")

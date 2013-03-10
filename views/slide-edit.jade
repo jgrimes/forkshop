@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1 Editing slide #{slide.name} 
+    small in the &ldquo;#{thisClass.name}&rdquo; class
+
+  form(action="/classes/#{thisClass._id}/slides", method="POST")
+
+    include blocks/slide-editor

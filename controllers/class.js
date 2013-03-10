@@ -22,6 +22,57 @@ module.exports = {
   , creationForm: function(req, res) {
       res.render('class-create');
     }
+  , showSlides: function(req, res) {
+      Class.findOne({ _id: req.param('classID') }).exec(function(err, thisClass) {
+        res.render('slides', {
+            thisClass: thisClass
+          , slides: thisClass.slides
+        });
+      });
+    }
+  , showSlide: function(req, res) {
+      Class.findOne({ _id: req.param('classID') }).exec(function(err, thisClass) {
+        res.render('slide', {
+            thisClass: thisClass
+          , slide: thisClass.slides[ req.param('slideID') - 1 ]
+        });
+      });
+    }
+  , createSlideForm: function(req, res) {
+      Class.findOne({ _id: req.param('classID') }).exec(function(err, thisClass) {
+        res.render('slide-create', {
+            thisClass: thisClass
+          , slide: { name: '', content: '## Slide One\nYour first awesome slide.' } // empty slide (or template!)
+        });
+      });
+    }
+  , createSlide: function(req, res) {
+      Class.findOne({ _id: req.param('classID') }).exec(function(err, thisClass) {
+
+        // TODO: create file in github here!
+        var gitObject = { name: 'dummy slide', foo: 'bar' };
+
+        thisClass.slides.push( gitObject );
+
+        thisClass.save(function(err) {
+          res.redirect('/classes/'+thisClass._id+'/slides');
+        });
+      });
+    }
+  , editSlideForm: function(req, res) {
+      Class.findOne({ _id: req.param('classID') }).exec(function(err, thisClass) {
+        res.render('slide-edit', {
+            thisClass: thisClass
+          , slide: thisClass.slides[ req.param('slideID') - 1 ] // TODO: get this from the slides!
+        });
+      });
+    }
+  , editSlide: function(req, res) {
+      Class.findOne({ _id: req.param('classID') }).exec(function(err, thisClass) {
+        // TODO: modify file!
+        res.redirect('/classes/'+thisClass._id+'/slides');
+      });
+    }
   , repoImport: function(req, res) {
       // This is for importing a repo that already exists in Github.
       var thisClass = new Class({
