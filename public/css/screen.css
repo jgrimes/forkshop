@@ -1,82 +1,57 @@
-/* Edit this CSS */
+/* [mostly] empty tile for your CSS! */
 
 /* make room for the header */
 body {
-  padding-top: 60px;
+  padding-top: 51px;
   padding-bottom: 40px;
-  background-color: #eaeaea;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-h3 {
-	font-size: 22px;
-}
-
-footer {
-	text-align: right;
-}
-
-.started {
-  display: inline-block;
-  *display: inline;
-  /* IE7 inline-block hack */
-  *zoom: 1;
-  margin-bottom: 0;
-  cursor: pointer;
-  color: #333333;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  border: 1px solid #bbbbbb;
-  *border: 0;
-  border-bottom-color: #a2a2a2;
-  *margin-left: .3em;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  border: 0px;
-  padding: 0px;
-}
-
-.navbar-inverse .brand,
-.navbar-inverse .nav > li > a {
-  color: #2e333a;
-}
-
-.navbar-inverse .navbar-inner {
-  background-color: #c9deff;
-  border-color: #c9deff;
-}
-
-.titleimg {
-	text-align: center;
+  background-image: url('http://aris.io/img/bookshelf-original.jpg');
 }
 
 .hero-unit {
-	padding: 0px;
-    margin-bottom: 30px;
-    width: auto;
-    background-color: #eaeaea;
-	/*background-color: #afcfff;*/
-	width: 100%;
+  background: url('http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2011/9/5/1315228538800/Project-Librarian-Jane-Ta-021.jpg');
+  background-size: 100% auto;
+  color: white;
 }
 
-
-.spanimg {
-	text-align: center;
-	height: 220px;
-	vertical-align: middle;
+.pitches .span4 {
+  padding: 1em;
+  background: rgba(255,255,255,0.5);
+  border-radius: 6px;
+  font-size: 1.2em;
 }
 
-.span4 h3 {
-	text-align: center;
+.pitches .span4 h3 {
+  font-size: 1.1em;
+} 
+
+.pitches .span4 img {
+  max-height: 10em;
+  display:block;
+  margin: 1em auto 1em auto;
 }
 
-.span4 p {
-	margin-top: 20px;
-	font-size: 20px;
+.nice-border, .frill {
+  padding: 1em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+.nice-border {
+  background: rgba(255,255,255, 0.75);
+  width: 968px;
+}
+
+.frill {
+  background: white;
+  width: 940px;
+  margin-top: -1em;
+}
+
+footer {
+  text-align: right;
+}
+
+footer small {
+  margin-top: 4em;
+  display: block;
+}

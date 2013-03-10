@@ -1,25 +1,54 @@
 extends layout
 
 block content
+
+  .pull-right
+    a.btn(href="#", title="save for later")
+      i.icon-star
+      |  star
+    |  
+    a.btn.btn-primary(href="#")
+      i.icon-filter
+      |  fork this class &raquo;
+      
+
   h1 #{thisClass.name} 
     small a class on Coursefork
 
-  .pull-right
-    a.btn.btn-primary(href="#") fork
+  .btn-group.pull-right
+    .btn Presentation Mode 
+      i.icon-play
+    .btn.btn-toggle(data-toggle="dropdown") Download 
+      span.caret
+    ul.dropdown-menu
+      li
+        a PDF
+      li
+        a Powerpoint
+      li
+        a ODF
 
   p #{thisClass.description}
 
-  h2
-    a.btn.pull-right(href="/classes/#{thisClass._id}/slides/new") add &raquo;
-    a(href="/classes/#{thisClass._id}/slides") #{thisClass.slides.length} Slides
+  .row-fluid(style="padding-top: 1em;")
+    .span4
+      h2
+        a.btn.pull-right(href="/classes/#{thisClass._id}/slides/new") add &raquo;
+        a(href="/classes/#{thisClass._id}/slides") #{thisClass.slides.length} Slides
 
-  ol
-    - for slide, i in thisClass.slides
-      li(style="clear:both;")
-        a.btn.btn-micro.pull-right(href="/classes/#{thisClass._id}/slides/#{i + 1}/edit") edit
-        a(href="/classes/#{thisClass._id}/slides/#{i + 1}") slide: #{slide.name}
+      ol.nav.nav-tabs.nav-stacked
+        - for slide, i in thisClass.slides
+          li(style="clear:both;")
+            a.btn.btn-micro.pull-right(href="/classes/#{thisClass._id}/slides/#{i + 1}/edit") edit
+            a(href="/classes/#{thisClass._id}/slides/#{i + 1}") slide: #{slide.name}
+
+      h2(style="margin-top: 2em;")
+        a.btn.pull-right(href="/classes/#{thisClass._id}/slides/new") add &raquo;
+
+    .span8(style="height: 25em; text-align:center; padding-top: 7.5em; border: 1px solid black; border-radius: 3px;")
+      h1 SLIDE PREVIEW
 
   h2
-    a(href="/classes/#{thisClass._id}/code") Code
+    a(href="/classes/#{thisClass._id}/code") Code, Files, & Resources
 
   a.btn.btn-primary.pull-right fork

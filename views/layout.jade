@@ -36,13 +36,21 @@ html
               li
                 a(href="/login") Log In
 
+    .nice-border
+      - if (noFrill)
+        .container
+          - if (typeof(message) != 'undefined')
+            h1 #{message}
 
-    .container
-      - if (typeof(message) != 'undefined')
-        h1 #{message}
+          block content
+      - else
+        .frill
+          .container
+            - if (typeof(message) != 'undefined')
+              h1 #{message}
 
-      block content
+            block content
 
-    .container
-      footer
-        small &copy; 2013 Coursefork
+      .container
+        footer
+          small &copy; 2013 Coursefork
