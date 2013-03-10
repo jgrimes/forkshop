@@ -11,12 +11,13 @@ body {
   background: url('/img/librarian.jpg');
   background-size: 100% auto;
   color: white;
+  margin-top: 0.5em;
+  margin-bottom: 2em;
   text-shadow: 0 0 5px black,
-  0 0 5px black,
-  0 0 5px black,
-  0 0 15px black,
-  0 0 15px black
-  ;
+    0 0 5px black,
+    0 0 5px black,
+    0 0 15px black,
+    0 0 15px black;
 }
 
 .pitches .span4 {
