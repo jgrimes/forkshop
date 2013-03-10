@@ -301,7 +301,7 @@
      inkscape:document-units="px"
      inkscape:grid-bbox="true"
      showgrid="false"
-     inkscape:current-layer="layer5"
+     inkscape:current-layer="layer1"
      inkscape:cy="25.67737"
      inkscape:cx="30.987617"
      inkscape:zoom="4.9170839"
@@ -378,7 +378,10 @@ Lapo Calamandrei</dc:title>
        style="color:#000000;fill:#f2f2f2;fill-opacity:1;fill-rule:nonzero;stroke:url(#radialGradient15656);stroke-width:0.99999994000000003;stroke-linecap:round;stroke-linejoin:round;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:block;overflow:visible"
        d="M 7.6531674,3.5156747 L 31.184222,3.4999998 C 31.184222,3.4999998 41.5,13.07421 41.5,13.712818 L 41.5,43.414218 C 41.5,44.052825 40.985687,44.566938 40.346833,44.566938 L 7.6531674,44.566938 C 7.0143129,44.566938 6.5000004,44.052825 6.5000004,43.414218 L 6.5000004,4.6683954 C 6.5000004,4.0297882 7.0143129,3.5156747 7.6531674,3.5156747 z "
        id="rect15391"
-       sodipodi:nodetypes="ccccccccc" />
+       sodipodi:nodetypes="ccccccccc"
+       inkscape:export-filename="/Users/elliott/git/forkshop/images/new200px.png"
+       inkscape:export-xdpi="427.5"
+       inkscape:export-ydpi="427.5" />
   </g>
   <g
      inkscape:groupmode="layer"
