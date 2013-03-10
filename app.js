@@ -68,6 +68,7 @@ passport.use(new GitHubStrategy({
 
 // make the HTML output readible, for designers. :)
 app.locals.pretty = true;
+app.locals.noFrill = false;
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
@@ -83,10 +84,10 @@ app.use(passport.session());
 app.use(app.router);
 app.use(express.static(__dirname + '/public'));
 
-/* app.use(function(req, res, next) {
+app.use(function(req, res, next) {
   app.locals.user = req.user;
   next();
-}); */
+}); 
 
 /* Configure "routes".
     "routes" are the mappings your browser/client use to
@@ -116,7 +117,7 @@ app.get('/', function(req, res) {
 
     res.render('index', {
       user: req.user,
-      foo: 'bar' //this is an example variable to be sent to the rendering engine
+      noFrill: true
     });
   }
 
