@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="990"
+   height="765"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.0 r9654"
+   inkscape:export-filename="/Users/elliott/git/cflogo/cflogotshirt2blk.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300"
+   sodipodi:docname="drawing.svg">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="DotS"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="DotS"
+       style="overflow:visible">
+      <path
+         id="path3983"
+         d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none;marker-end:none"
+         transform="matrix(0.2,0,0,0.2,1.48,0.2)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Mstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Mstart"
+       style="overflow:visible">
+      <path
+         id="path3939"
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="scale(0.6,0.6)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <filter
+       id="filter4807"
+       inkscape:menu-tooltip="Draws a black outline around"
+       inkscape:menu="ABCs"
+       inkscape:label="Black outline"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         id="feGaussianBlur4809"
+         stdDeviation="2"
+         result="result0" />
+      <feComposite
+         id="feComposite4811"
+         in2="result0"
+         result="result3"
+         operator="arithmetic"
+         in="SourceGraphic"
+         k2="1"
+         k3="10"
+         k1="0"
+         k4="0" />
+      <feComposite
+         id="feComposite4813"
+         operator="in"
+         in="result3"
+         result="result4"
+         in2="result3" />
+      <feBlend
+         blend="normal"
+         id="feBlend4823"
+         in2="result4"
+         mode="normal" />
+    </filter>
+    <filter
+       id="filter4815"
+       inkscape:menu-tooltip="Draws a black outline around"
+       inkscape:menu="ABCs"
+       inkscape:label="Black outline"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         id="feGaussianBlur4817"
+         stdDeviation="2"
+         in="SourceAlpha"
+         result="result0" />
+      <feComposite
+         id="feComposite4819"
+         in2="result0"
+         result="result3"
+         operator="arithmetic"
+         in="SourceGraphic"
+         k2="1"
+         k3="10"
+         k1="0"
+         k4="0" />
+      <feComposite
+         id="feComposite4821"
+         in2="result3"
+         operator="in"
+         in="result3"
+         result="result4" />
+    </filter>
+    <filter
+       id="filter4889"
+       inkscape:menu-tooltip="Draws a black outline around"
+       inkscape:menu="ABCs"
+       inkscape:label="Black outline"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         id="feGaussianBlur4891"
+         stdDeviation="2"
+         in="SourceAlpha"
+         result="result0" />
+      <feComposite
+         id="feComposite4893"
+         in2="result0"
+         result="result3"
+         operator="arithmetic"
+         in="SourceGraphic"
+         k2="1"
+         k3="10"
+         k1="0"
+         k4="0" />
+      <feComposite
+         id="feComposite4895"
+         in2="result3"
+         operator="in"
+         in="result3"
+         result="result4" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.61"
+     inkscape:cx="524.92463"
+     inkscape:cy="379.15563"
+     inkscape:document-units="px"
+     inkscape:current-layer="g3051"
+     showgrid="false"
+     inkscape:window-width="1280"
+     inkscape:window-height="740"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Background"
+     sodipodi:insensitive="true"
+     style="display:none"
+     transform="translate(0,20.905518)">
+    <rect
+       style="color:#000000;fill:#80b3ff;fill-opacity:1;fill-rule:nonzero;stroke:#808080;stroke-width:3;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect4725"
+       width="1046.0509"
+       height="741.66724"
+       x="10.717734"
+       y="-1.8598472"
+       ry="3.9068801" />
+  </g>
+  <g
+     inkscape:label="Underover"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-287.36218)"
+     style="display:none">
+    <g
+       id="g3055"
+       transform="matrix(2.6613597,0,0,2.6613597,311.2102,508.61216)"
+       inkscape:export-filename="/Users/elliott/git/cflogo/courseforkover100px.png"
+       inkscape:export-xdpi="11.188984"
+       inkscape:export-ydpi="11.188984">
+      <path
+         id="path3041"
+         d="M 0,0 151,0 151,166 0,166 0,0 z"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff" />
+      <path
+         id="path3043"
+         d="m 76.66,21.6 c 0.66,-0.43 1.61,-2.04 2.41,-0.82 8.14,7.77 16.59,15.22 24.62,23.11 -5.17,0.14 -10.34,0.02 -15.51,0.1 -0.23,6.08 0.97,12.49 -1.77,18.19 -2.89,9.17 -11.85,13.8 -18.37,20.06 -4.08,-3.83 -8.75,-7 -12.63,-11.04 3.23,-5.28 8.93,-8.2 13.17,-12.52 3.26,-4.23 2.03,-9.77 2.24,-14.7 -6,0 -11.99,-0.01 -17.98,-0.05 7.72,-7.67 15.95,-14.81 23.82,-22.33 z"
+         inkscape:connector-curvature="0"
+         style="fill:#424242" />
+      <path
+         id="path3045"
+         d="m 3.84,55.56 c 8.03,-8.32 16.85,-15.9 25.29,-23.83 8.53,7.87 17.26,15.58 25.38,23.87 -5.42,-0.06 -10.84,0.03 -16.26,-0.04 -1.49,7.47 4.02,13.4 8.5,18.59 14.6,15.81 32.14,28.54 46.97,44.12 6.78,7.27 13.21,15.72 14.56,25.87 0.18,5.05 -0.05,10.12 0.04,15.18 -6.2,-0.06 -12.41,0.05 -18.61,0 0,-5.68 0.04,-11.37 0.04,-17.03 C 85.99,134.49 79.3,128.74 73.32,122.68 59.44,109.61 44.16,97.94 31.65,83.47 27,78.13 22.92,72.04 21.09,65.13 20.56,61.96 20.84,58.75 20.8,55.56 15.15,55.64 9.5,55.54 3.84,55.56 z"
+         inkscape:connector-curvature="0"
+         style="fill:#424242" />
+      <path
+         id="path3047"
+         d="m 88.58,79.99 c 8.39,-7.99 17.01,-15.76 25.41,-23.74 8.61,7.78 16.98,15.8 25.44,23.74 -5.12,0.06 -10.23,-0.07 -15.35,0.11 0.91,6.94 -1.46,13.89 -5.43,19.52 -3.97,5.11 -9.61,8.48 -14.22,12.94 -4.33,-3.52 -8.45,-7.29 -12.89,-10.68 2.59,-5.01 7.87,-7.75 11.93,-11.4 2.64,-2.74 3.42,-6.69 3.43,-10.37 -6.1,-0.25 -12.22,-0.02 -18.32,-0.12 z"
+         inkscape:connector-curvature="0"
+         style="fill:#424242" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:165.03051758px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#333333;fill-opacity:1;stroke:none;font-family:Onyx;-inkscape-font-specification:Onyx"
+       x="110.59344"
+       y="534.19366"
+       id="text3061"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/Users/elliott/git/cflogo/courseforkover100px.png"
+       inkscape:export-xdpi="11.188984"
+       inkscape:export-ydpi="11.188984"><tspan
+         sodipodi:role="line"
+         id="tspan3063"
+         x="110.59344"
+         y="534.19366"
+         style="fill:#333333;font-family:gulim;-inkscape-font-specification:gulim">coursefork</tspan></text>
+  </g>
+  <g
+     style="display:inline"
+     transform="translate(0,-287.36218)"
+     id="g3051"
+     inkscape:groupmode="layer"
+     inkscape:label="sideways">
+    <path
+       id="path3057"
+       d="m 598.23665,403.44225 c 2.93704,-1.91353 7.16458,-9.0781 10.72463,-3.64905 36.22343,34.57691 73.82636,67.7298 109.56029,102.84071 -23.00678,0.62302 -46.01354,0.089 -69.02031,0.445 -1.02351,27.05632 4.31655,55.58116 -7.8766,80.94646 -12.86066,40.80696 -52.73311,61.41071 -81.74746,89.26803 -18.1562,-17.04371 -38.93794,-31.15037 -56.20415,-49.12857 14.37366,-23.49628 39.73896,-36.49043 58.60719,-55.71464 14.50717,-18.82372 9.0336,-43.47703 9.9681,-65.41577 -26.70029,0 -53.35611,-0.0445 -80.01192,-0.22251 34.35439,-34.1319 70.97832,-65.90528 106.00023,-99.36966 z"
+       inkscape:connector-curvature="0"
+       style="fill:#424242"
+       inkscape:export-filename="/Users/elliott/git/cflogo/courseforkonlyfavicon.png"
+       inkscape:export-xdpi="3.99"
+       inkscape:export-ydpi="3.99" />
+    <path
+       id="path3059"
+       d="m 274.18386,554.56601 c 35.73393,-37.02443 74.98339,-70.75582 112.54183,-106.04474 37.95894,35.02191 76.8079,69.33182 112.94232,106.22275 -24.11928,-0.267 -48.23857,0.13343 -72.35785,-0.17801 -6.63058,33.24189 17.88921,59.63069 37.82544,82.72647 64.97077,70.35533 143.02468,127.00449 209.01894,196.33629 30.17135,32.35189 58.78518,69.95483 64.79276,115.12285 0.801,22.47276 -0.22251,45.03453 0.178,67.55178 -27.59033,-0.267 -55.22514,0.2225 -82.81547,0 0,-25.27629 0.178,-50.59707 0.178,-75.78438 -16.73219,-34.71039 -46.50304,-60.2982 -73.11436,-87.26551 -61.76671,-58.16218 -129.76351,-110.09429 -185.43366,-174.48655 -20.69274,-23.76327 -38.84896,-50.86409 -46.99254,-81.61394 -2.35852,-14.10666 -1.1125,-28.39134 -1.29052,-42.58701 -25.14279,0.356 -50.28558,-0.089 -75.47289,0 z"
+       inkscape:connector-curvature="0"
+       style="fill:#424242"
+       inkscape:export-filename="/Users/elliott/git/cflogo/courseforkonlyfavicon.png"
+       inkscape:export-xdpi="3.99"
+       inkscape:export-ydpi="3.99" />
+    <path
+       id="path3061"
+       d="m 651.28128,663.28079 c 37.33593,-35.55592 75.69538,-70.13283 113.07581,-105.64424 38.31496,34.6214 75.56189,70.31083 113.20932,105.64424 -22.78426,0.26699 -45.52403,-0.3115 -68.3083,0.4895 4.04956,30.88336 -6.49706,61.81122 -24.16377,86.86501 -17.66671,22.73977 -42.76501,37.73644 -63.27974,57.58368 -19.26872,-15.66419 -37.60295,-32.44088 -57.36116,-47.52655 11.52563,-22.29477 35.0219,-34.4879 53.08911,-50.73059 11.74814,-12.19315 15.21918,-29.77086 15.26368,-46.14704 -27.14532,-1.11251 -54.37963,-0.0889 -81.52495,-0.53401 z"
+       inkscape:connector-curvature="0"
+       style="fill:#424242"
+       inkscape:export-filename="/Users/elliott/git/cflogo/courseforkonlyfavicon.png"
+       inkscape:export-xdpi="3.99"
+       inkscape:export-ydpi="3.99" />
+    <text
+       inkscape:export-ydpi="206.85001"
+       inkscape:export-xdpi="206.85001"
+       inkscape:export-filename="/Users/elliott/git/cflogo/courseforkside1000px.png"
+       sodipodi:linespacing="125%"
+       id="text3063"
+       y="255.73167"
+       x="-1028.6427"
+       style="font-size:143.9263916px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#333333;fill-opacity:1;stroke:none;font-family:Onyx;-inkscape-font-specification:Onyx"
+       xml:space="preserve"
+       transform="matrix(0,-1,1,0,0,0)"><tspan
+         style="fill:#333333;font-family:gulim;-inkscape-font-specification:gulim"
+         y="255.73167"
+         x="-1028.6427"
+         id="tspan3065"
+         sodipodi:role="line">coursefork</tspan></text>
+  </g>
+  <g
+     transform="translate(0,-287.36218)"
+     id="g3065"
+     inkscape:groupmode="layer"
+     inkscape:label="Sideby"
+     style="display:none">
+    <g
+       transform="matrix(0.88422281,0,0,0.88422281,36.924486,597.9026)"
+       id="g3067">
+      <path
+         style="fill:#ffffff"
+         inkscape:connector-curvature="0"
+         d="M 0,0 151,0 151,166 0,166 0,0 z"
+         id="path3069" />
+      <path
+         style="fill:#424242"
+         inkscape:connector-curvature="0"
+         d="m 76.66,21.6 c 0.66,-0.43 1.61,-2.04 2.41,-0.82 8.14,7.77 16.59,15.22 24.62,23.11 -5.17,0.14 -10.34,0.02 -15.51,0.1 -0.23,6.08 0.97,12.49 -1.77,18.19 -2.89,9.17 -11.85,13.8 -18.37,20.06 -4.08,-3.83 -8.75,-7 -12.63,-11.04 3.23,-5.28 8.93,-8.2 13.17,-12.52 3.26,-4.23 2.03,-9.77 2.24,-14.7 -6,0 -11.99,-0.01 -17.98,-0.05 7.72,-7.67 15.95,-14.81 23.82,-22.33 z"
+         id="path3071" />
+      <path
+         style="fill:#424242"
+         inkscape:connector-curvature="0"
+         d="m 3.84,55.56 c 8.03,-8.32 16.85,-15.9 25.29,-23.83 8.53,7.87 17.26,15.58 25.38,23.87 -5.42,-0.06 -10.84,0.03 -16.26,-0.04 -1.49,7.47 4.02,13.4 8.5,18.59 14.6,15.81 32.14,28.54 46.97,44.12 6.78,7.27 13.21,15.72 14.56,25.87 0.18,5.05 -0.05,10.12 0.04,15.18 -6.2,-0.06 -12.41,0.05 -18.61,0 0,-5.68 0.04,-11.37 0.04,-17.03 C 85.99,134.49 79.3,128.74 73.32,122.68 59.44,109.61 44.16,97.94 31.65,83.47 27,78.13 22.92,72.04 21.09,65.13 20.56,61.96 20.84,58.75 20.8,55.56 15.15,55.64 9.5,55.54 3.84,55.56 z"
+         id="path3073" />
+      <path
+         style="fill:#424242"
+         inkscape:connector-curvature="0"
+         d="m 88.58,79.99 c 8.39,-7.99 17.01,-15.76 25.41,-23.74 8.61,7.78 16.98,15.8 25.44,23.74 -5.12,0.06 -10.23,-0.07 -15.35,0.11 0.91,6.94 -1.46,13.89 -5.43,19.52 -3.97,5.11 -9.61,8.48 -14.22,12.94 -4.33,-3.52 -8.45,-7.29 -12.89,-10.68 2.59,-5.01 7.87,-7.75 11.93,-11.4 2.64,-2.74 3.42,-6.69 3.43,-10.37 -6.1,-0.25 -12.22,-0.02 -18.32,-0.12 z"
+         id="path3075" />
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3077"
+       y="739.90796"
+       x="178.022"
+       style="font-size:165.03051758px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#333333;fill-opacity:1;stroke:none;font-family:Onyx;-inkscape-font-specification:Onyx"
+       xml:space="preserve"><tspan
+         style="fill:#333333;font-family:gulim;-inkscape-font-specification:gulim"
+         y="739.90796"
+         x="178.022"
+         id="tspan3079"
+         sodipodi:role="line">Coursefork</tspan></text>
+  </g>
+  <g
+     style="display:none"
+     inkscape:label="Sideby lower osyc"
+     inkscape:groupmode="layer"
+     id="g3081"
+     transform="translate(0,-287.36218)">
+    <path
+       style="fill:#333333"
+       inkscape:connector-curvature="0"
+       d="m 924.85284,605.26953 c 0.63763,-0.41541 1.55541,-1.97082 2.32828,-0.79219 7.86397,7.50652 16.02742,14.70388 23.78511,22.32632 -4.99467,0.13526 -9.98936,0.0193 -14.98404,0.0966 -0.2222,5.87382 0.9371,12.06645 -1.70998,17.57316 -2.79199,8.85904 -11.44815,13.33203 -17.74705,19.37975 -3.94165,-3.70012 -8.45329,-6.76262 -12.20171,-10.66563 3.12046,-5.10095 8.62718,-7.92192 12.7234,-12.09543 3.14945,-4.08656 1.96116,-9.43869 2.16404,-14.20151 -5.79654,0 -11.58341,-0.01 -17.37029,-0.0483 7.45821,-7.40991 15.40913,-14.30779 23.01224,-21.57278 z"
+       id="path3087" />
+    <path
+       style="fill:#333333"
+       inkscape:connector-curvature="0"
+       d="m 854.50224,638.07792 c 7.75768,-8.03786 16.27859,-15.36081 24.43239,-23.0219 8.24074,7.60312 16.6747,15.05167 24.51934,23.06054 -5.23621,-0.058 -10.47241,0.0289 -15.70861,-0.0387 -1.43948,7.21669 3.88368,12.9456 8.21175,17.9596 14.10491,15.27387 31.05011,27.57219 45.37721,42.62385 6.55009,7.02347 12.76204,15.18692 14.06626,24.99273 0.1739,4.87875 -0.0483,9.77683 0.0386,14.66523 -5.98975,-0.058 -11.98916,0.0483 -17.97891,0 0,-5.48738 0.0386,-10.98443 0.0386,-16.4525 -3.63249,-7.53549 -10.09563,-13.09051 -15.87284,-18.94501 -13.40932,-12.62678 -28.17116,-23.90104 -40.25694,-37.88035 -4.49231,-5.15891 -8.43396,-11.04239 -10.2019,-17.71807 -0.51203,-3.06251 -0.24152,-6.16365 -0.28016,-9.24548 -5.45841,0.0773 -10.91682,-0.0193 -16.38487,0 z"
+       id="path3089" />
+    <path
+       style="fill:#333333"
+       inkscape:connector-curvature="0"
+       d="m 936.36863,661.67948 c 8.10548,-7.71905 16.43318,-15.22557 24.54832,-22.93496 8.31803,7.51618 16.40419,15.26421 24.57733,22.93496 -4.94639,0.058 -9.88311,-0.0676 -14.82949,0.10627 0.87914,6.70466 -1.41049,13.41897 -5.24586,18.85806 -3.83538,4.93671 -9.28412,8.19244 -13.73779,12.50119 -4.18317,-3.40063 -8.16345,-7.04279 -12.45289,-10.31783 2.50217,-4.84011 7.60312,-7.48719 11.52545,-11.01342 2.55047,-2.64708 3.30402,-6.46313 3.31368,-10.01834 -5.89315,-0.24152 -11.80561,-0.0193 -17.69875,-0.11593 z"
+       id="path3091" />
+    <text
+       xml:space="preserve"
+       style="font-size:165.03051758px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#333333;fill-opacity:1;stroke:none;filter:url(#filter4807);font-family:Onyx;-inkscape-font-specification:Onyx"
+       x="34.879147"
+       y="739.90796"
+       id="text3093"
+       sodipodi:linespacing="125%"
+       transform="matrix(0.96156528,0,0,0.96156528,22.682622,23.21627)"><tspan
+         sodipodi:role="line"
+         id="tspan3095"
+         x="34.879147"
+         y="739.90796"
+         style="fill:#333333;font-family:gulim;-inkscape-font-specification:gulim">coursefork</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:50.32395554px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#333333;fill-opacity:1;stroke:none;font-family:Onyx;-inkscape-font-specification:Onyx"
+       x="57.381832"
+       y="790.73553"
+       id="text3097"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3099"
+         x="57.381832"
+         y="790.73553"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#333333;font-family:Gulim;-inkscape-font-specification:Gulim">o p e n   s o u r c e   y o u r  c o u r s e </tspan></text>
+    <path
+       style="fill:#808080;stroke:#808080;stroke-width:2.88469577;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none;marker-end:none"
+       d="m 1009.798,749.40896 c -961.565214,0 -964.312544,0 -964.312544,0 l 0,0"
+       id="path3101"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+  </g>
+  <g
+     transform="translate(0,-287.36218)"
+     id="g3033"
+     inkscape:groupmode="layer"
+     inkscape:label="Sideby lower osyc copy"
+     style="display:none">
+    <path
+       id="path3035"
+       d="m 924.85284,605.26953 c 0.63763,-0.41541 1.55541,-1.97082 2.32828,-0.79219 7.86397,7.50652 16.02742,14.70388 23.78511,22.32632 -4.99467,0.13526 -9.98936,0.0193 -14.98404,0.0966 -0.2222,5.87382 0.9371,12.06645 -1.70998,17.57316 -2.79199,8.85904 -11.44815,13.33203 -17.74705,19.37975 -3.94165,-3.70012 -8.45329,-6.76262 -12.20171,-10.66563 3.12046,-5.10095 8.62718,-7.92192 12.7234,-12.09543 3.14945,-4.08656 1.96116,-9.43869 2.16404,-14.20151 -5.79654,0 -11.58341,-0.01 -17.37029,-0.0483 7.45821,-7.40991 15.40913,-14.30779 23.01224,-21.57278 z"
+       inkscape:connector-curvature="0"
+       style="fill:#333333"
+       inkscape:export-filename="/Users/elliott/git/cflogo/pcflogo100px.png"
+       inkscape:export-xdpi="8.8500004"
+       inkscape:export-ydpi="8.8500004" />
+    <path
+       id="path3037"
+       d="m 854.50224,638.07792 c 7.75768,-8.03786 16.27859,-15.36081 24.43239,-23.0219 8.24074,7.60312 16.6747,15.05167 24.51934,23.06054 -5.23621,-0.058 -10.47241,0.0289 -15.70861,-0.0387 -1.43948,7.21669 3.88368,12.9456 8.21175,17.9596 14.10491,15.27387 31.05011,27.57219 45.37721,42.62385 6.55009,7.02347 12.76204,15.18692 14.06626,24.99273 0.1739,4.87875 -0.0483,9.77683 0.0386,14.66523 -5.98975,-0.058 -11.98916,0.0483 -17.97891,0 0,-5.48738 0.0386,-10.98443 0.0386,-16.4525 -3.63249,-7.53549 -10.09563,-13.09051 -15.87284,-18.94501 -13.40932,-12.62678 -28.17116,-23.90104 -40.25694,-37.88035 -4.49231,-5.15891 -8.43396,-11.04239 -10.2019,-17.71807 -0.51203,-3.06251 -0.24152,-6.16365 -0.28016,-9.24548 -5.45841,0.0773 -10.91682,-0.0193 -16.38487,0 z"
+       inkscape:connector-curvature="0"
+       style="fill:#333333"
+       inkscape:export-filename="/Users/elliott/git/cflogo/pcflogo100px.png"
+       inkscape:export-xdpi="8.8500004"
+       inkscape:export-ydpi="8.8500004" />
+    <path
+       id="path3039"
+       d="m 936.36863,661.67948 c 8.10548,-7.71905 16.43318,-15.22557 24.54832,-22.93496 8.31803,7.51618 16.40419,15.26421 24.57733,22.93496 -4.94639,0.058 -9.88311,-0.0676 -14.82949,0.10627 0.87914,6.70466 -1.41049,13.41897 -5.24586,18.85806 -3.83538,4.93671 -9.28412,8.19244 -13.73779,12.50119 -4.18317,-3.40063 -8.16345,-7.04279 -12.45289,-10.31783 2.50217,-4.84011 7.60312,-7.48719 11.52545,-11.01342 2.55047,-2.64708 3.30402,-6.46313 3.31368,-10.01834 -5.89315,-0.24152 -11.80561,-0.0193 -17.69875,-0.11593 z"
+       inkscape:connector-curvature="0"
+       style="fill:#333333"
+       inkscape:export-filename="/Users/elliott/git/cflogo/pcflogo100px.png"
+       inkscape:export-xdpi="8.8500004"
+       inkscape:export-ydpi="8.8500004" />
+    <text
+       transform="matrix(0.96156528,0,0,0.96156528,22.682622,23.21627)"
+       sodipodi:linespacing="125%"
+       id="text3041"
+       y="739.90796"
+       x="34.879147"
+       style="font-size:165.03051758px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#333333;fill-opacity:1;stroke:none;filter:url(#filter4807);font-family:Onyx;-inkscape-font-specification:Onyx"
+       xml:space="preserve"
+       inkscape:export-filename="/Users/elliott/git/cflogo/pcflogo100px.png"
+       inkscape:export-xdpi="8.8500004"
+       inkscape:export-ydpi="8.8500004"><tspan
+         style="fill:#333333;font-family:gulim;-inkscape-font-specification:gulim"
+         y="739.90796"
+         x="34.879147"
+         id="tspan3043"
+         sodipodi:role="line">coursefork</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3045"
+       y="790.73553"
+       x="57.381832"
+       style="font-size:50.32395554px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#333333;fill-opacity:1;stroke:none;font-family:Onyx;-inkscape-font-specification:Onyx"
+       xml:space="preserve"
+       inkscape:export-filename="/Users/elliott/git/cflogo/pcflogo100px.png"
+       inkscape:export-xdpi="8.8500004"
+       inkscape:export-ydpi="8.8500004"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#333333;font-family:Gulim;-inkscape-font-specification:Gulim"
+         y="790.73553"
+         x="57.381832"
+         id="tspan3047"
+         sodipodi:role="line">o p e n   s o u r c e   y o u r  c o u r s e </tspan></text>
+    <path
+       sodipodi:nodetypes="ccc"
+       inkscape:connector-curvature="0"
+       id="path3049"
+       d="m 1009.798,749.40896 c -961.565214,0 -964.312544,0 -964.312544,0 l 0,0"
+       style="fill:#808080;stroke:#808080;stroke-width:2.88469577;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none;marker-end:none"
+       inkscape:export-filename="/Users/elliott/git/cflogo/pcflogo100px.png"
+       inkscape:export-xdpi="8.8500004"
+       inkscape:export-ydpi="8.8500004" />
+  </g>
+</svg>
