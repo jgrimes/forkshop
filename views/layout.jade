@@ -17,13 +17,11 @@ html
         .container
           ul.nav
             li
-              a.brand(href="/") #SWEDU
-            li
               a(href="/") Home
 
             if (typeof(user) == 'undefined')
               li
-                a(href="/register") Sign Up
+                a(href="/about") About
 
           ul.nav.pull-right
             if (typeof(user) != 'undefined')
@@ -32,6 +30,9 @@ html
               li
                 a(href="/logout") Log Out
             else
+              li
+                .started
+                  a.btn(href="/auth/github") Get Started &raquo;
               li
                 a(href="/login") Log In
 

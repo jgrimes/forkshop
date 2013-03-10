@@ -5,30 +5,50 @@ body {
   padding-top: 60px;
   padding-bottom: 40px;
   background-color: #eaeaea;
-  font-family: Gulim; Arial; 
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h3 {
-	font-size: 20px;
+	font-size: 22px;
 }
 
 footer {
 	text-align: right;
 }
 
+.started {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+  margin-bottom: 0;
+  cursor: pointer;
+  color: #333333;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  border: 1px solid #bbbbbb;
+  *border: 0;
+  border-bottom-color: #a2a2a2;
+  *margin-left: .3em;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border: 0px;
+  padding: 0px;
+}
 
 .navbar-inverse .brand,
 .navbar-inverse .nav > li > a {
-  color: #dddddd;
+  color: #2e333a;
 }
 
 .navbar-inverse .navbar-inner {
-  background-color: #87a5d0;
-  border-color: #252525;
-}
-
-.navbar-inverse .brand {
-	color: #cccccc;
+  background-color: #c9deff;
+  border-color: #c9deff;
 }
 
 .titleimg {
@@ -44,12 +64,19 @@ footer {
 	width: 100%;
 }
 
+
 .spanimg {
 	text-align: center;
-	height: 200px;
+	height: 220px;
+	vertical-align: middle;
 }
 
 .span4 h3 {
 	text-align: center;
+}
+
+.span4 p {
+	margin-top: 20px;
+	font-size: 20px;
 }
 
