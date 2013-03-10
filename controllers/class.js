@@ -36,6 +36,7 @@ module.exports = {
       });
 
     }
+
   , create: function(req, res) {
 
       var thisClass = new Class({
@@ -45,47 +46,44 @@ module.exports = {
         , _owner: req.user._id
       });
 
+      var util = require("./util");
+      var github = util.github(req.user.github.token)
       thisClass.save(function(err) {
-        res.redirect( '/classes/' + thisClass._id);
-      });
+        // save to Git...
+        console.log("creating a repo named "+thisClass.name);
 
-      // save to Git...
-      console.log("creating a repo named "+thisClass.name);
-
-      var GitHubApi = require("github");
-      var github = new GitHubApi({
-        // required
-        version: "3.0.0",
-        // optional
-        timeout: 5000
-      });
-
-      github.authenticate({
-        //type: "oauth" // obviously, make OAuth happen here.
-        //, token: req.user.github.token // we're assuming this is here for now. Nulls? We don't handle no stinkin' nulls.
-          type: "basic"
-        , username: 'coursefork-test'
-        , password: 'coursefork001'
-      });
-
-     // this block is for debugging
-     //github.user.getFollowingFromUser({
-     //  user: "classfork-test"
-     //}, function(err, res) {
-     //  console.log(JSON.stringify(res));
-     //});
-
-      github.repos.create({
-        "name": thisClass.name,
-        "description": thisClass.description,
-        "homepage": "https://github.com",
-        "private": false,
-        "has_wiki": true
-      }, function(err, res) {
-        console.log("Got err?", err);
-        console.log("Got res?", res);
-      })
-
+        github.repos.fork({
+            "user": courseOwnerName
+          , "repo": courseName
+        }, function(forkerr, forkres) {
+          console.log("Creating a new fork:", forkerr);
+          if (forkres) {
+            // this is where we create a new class
+            console.log("forkin' A", forkres);
+              var templateUser = "coursefork";
+              var templateName = "course-template";
+              github.repos.fork({
+                  "user": templateUser
+                , "repo": templateName
+              }, function(err, res) {
+                console.log("Got err?", err);
+                console.log("Got res?", res);
+                github.repos.update({
+                    "user": thisClass._owner.github.username
+                  , "repo": templateName
+                  , "name": thisClass.name
+                  , "description": thisClass.description
+                  , "homepage": "https://coursefork.org"
+                  , "private": false
+                  , "has_wiki": true
+                })
+                res.redirect( '/courses/' + thisClass._id);
+              })
+          } else {
+            res.redirect("/error");//...or something. Whatever.
+          }
+        });
+     });
   }
   , view: function(req, res, next) {
       Class.findOne({ _id: req.param('classID') }).populate("_owner").exec(function(err, thisClass) {
