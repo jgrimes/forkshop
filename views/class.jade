@@ -7,7 +7,7 @@ block content
       i.icon-star
       |  star
     |  
-    a.btn.btn-primary(href="#")
+    a.btn.btn-primary.fork-button(href="#")
       i.icon-filter
       |  fork this class &raquo;
       
@@ -28,6 +28,8 @@ block content
       li
         a ODF
 
+  a.btn.edit-button.pull-right(href="#") edit
+
   p #{thisClass.description}
 
   .row-fluid(style="padding-top: 1em;")
@@ -47,7 +49,10 @@ block content
 
     .span8
       #preview(style="height: 25em; text-align:center; padding-top: 5.5em; border: 1px solid black; border-radius: 3px;")
-        h1 Building an MVP in 54 Hours
+        - if (edited)
+          h1 Coursefork MVP in <span id="magicNumber">54</span> Hours
+        - else
+          h1 Coursefork MVP in 54 Hours
         h2 or, Ideation at Ludicrous Speed
 
         p.pull-right(style="padding-top: 2em; padding-right: 2em;") an experiment by the coursefork team.
@@ -62,3 +67,22 @@ block content
     a.btn Upload New &raquo;
 
   p No files have been uploaded to this class yet!
+
+  script
+
+    $('.edit-button').click(function() {
+      $('#magicNumber').html('53');
+    });
+    $('.fork-button').click(function() {
+      $('.frill .container').html(''
+        + '<div id="copy-animation"><center style="margin-top:3em; padding-bottom: 10em; display: none;"><h1>Stand by while we copy files...</h1>'
+        + '<img src="/img/fork.gif" />'
+        + '<h2>Rest assured, no octopii will be harmed in the process.</h2></center></div>'
+      );
+      $('#copy-animation center').fadeIn();
+
+      setTimeout(function() {
+        window.location = '/classes/513cb2500778c65769000003/edited';
+      }, 5000);
+
+    });

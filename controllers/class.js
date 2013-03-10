@@ -144,7 +144,16 @@ module.exports = {
   , view: function(req, res, next) {
       Class.findOne({ _id: req.param('classID') }).populate("_owner").exec(function(err, thisClass) {
         res.render('class', {
-          thisClass: thisClass
+            thisClass: thisClass
+          , edited: false
+        });
+      });
+    }
+  , viewEdited: function(req, res, next) {
+      Class.findOne({ _id: req.param('classID') }).populate("_owner").exec(function(err, thisClass) {
+        res.render('class', {
+            thisClass: thisClass
+          , edited: true
         });
       });
     }
