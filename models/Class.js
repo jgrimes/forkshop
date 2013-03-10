@@ -16,9 +16,14 @@ ClassSchema.virtual('slides').get(function () {
   // TODO: GET THIS FROM GITHUB!!!
   // alternatively, store / track it when we create it?
   return [ 
-      { name: 'Introduction', content: 'foo' }
-    , { name: 'Why?',         content: 'foo' }
-    , { name: 'Solution',     content: 'foo' }
+      { name: 'Introduction',         content: 'foo' }
+    , { name: 'What\'s the problem?', content: 'foo' }
+    , { name: 'Teaching',             content: 'foo' }
+    , { name: 'Collaboration',   content: 'foo' }
+    , { name: 'The Solution',   content: 'foo' }
+    , { name: 'Open Source',   content: 'foo' }
+    , { name: 'RedHat',   content: 'foo' }
+    , { name: 'GitHub',   content: 'foo' }
     , { name: 'Questions?',   content: 'foo' }
   ];
 });
