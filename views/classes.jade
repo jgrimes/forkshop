@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  a.btn.pull-right(href="/classes/new") Create &raquo;
+
+  - if (typeof(course) != 'undefined')
+    h1 Classes in #{course.name}
+  - else
+    h1 Classes
+
+  ul
+  - for thisClass in classes
+    li
+      a(href="/classes/#{thisClass._id}") #{thisClass.name}

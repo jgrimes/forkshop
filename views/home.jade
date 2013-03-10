@@ -3,12 +3,25 @@ extends layout
 block content
   h1 Welcome, #{user.username}!
 
-  - if (courses)
-    h2 Your Courses
+  - if (courses.length > 0)
+    h2
+      a.btn.pull-right(href="/classes/new") Create a Class &raquo;
+      | Your Classes
+    p A class is a single session of the individuals being taught.
+    ul
+    - for thisClass in classes
+      li
+        a(href="/classes/#{thisClass._id}") #{thisClass.name}
+
+    h2
+      a.btn.pull-right(href="/classes/new") Create a Course &raquo;
+      | Your Courses
+    p A Course is a collection of classes / workshops that are arranged in a sequence.
     ul
     - for course in courses
       li
         a(href="/courses/#{course._id}") #{course.name}
+
   - else
     a.btn.btn-large.btn-primary(href="/courses/create") Create your first course &raquo;
 

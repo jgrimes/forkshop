@@ -4,7 +4,8 @@ block content
 
   if (typeof(user) != 'undefined')
     h2 Welcome, #{user.username}!
-
+   
+    a(href="/courses") List courses
   else
     .hero-unit
       .titleimg
@@ -39,7 +40,7 @@ block content
         p Create as many open courses as you like.  Anyone can copy a course by forking it.
 
       .span4
-        h3 Publish the the Web
+        h3 Publish to the Web
         .spanimg
           img(src="/img/out200px.png")
         p Get your course materials out there where your students can see them, using our site or yours.

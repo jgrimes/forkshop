@@ -1,42 +1,56 @@
 module.exports = {
     list: function(req, res) {
-      Course.find({}).exec(function(err, courses) {
-        res.render('courses', {
-          courses: courses
+      Class.find({}).exec(function(err, classes) {
+        res.render('classes', {
+          classes: classes
+        });
+      });
+    }
+  , listByCourse: function(req, res) {
+      Course.findOne({ _id: req.param('courseID') }).exec(function(err, course) {
+        Class.find({ _id: { $in: course.classes.map(function(courseClass) {
+          return courseClass._class;
+        })  }}).exec(function(err, classes) {
+
+          res.render('classes', {
+              course: course
+            , classes: classes
+          });
         });
       });
     }
   , creationForm: function(req, res) {
-      res.render('course-create');
+      res.render('class-create');
     }
   , repoImport: function(req, res) {
       // This is for importing a repo that already exists in Github.
-      var course = new Course({
-          name: req.param('courseName')
+      var thisClass = new Class({
+          name: req.param('className')
         , description: req.param('description')
-        //, _creator: req.user._id
+        , _creator: req.user._id
+        , _owner: req.user._id
       });
 
-      course.save(function(err) {
-        res.redirect( '/courses/' + course._id);
+      thisClass.save(function(err) {
+        res.redirect( '/classes/' + thisClass._id);
       });
 
     }
   , create: function(req, res) {
 
-      var course = new Course({
+      var thisClass = new Class({
           name: req.param('name')
         , description: req.param('description')
         , _creator: req.user._id
         , _owner: req.user._id
       });
 
-      course.save(function(err) {
-        res.redirect( '/courses/' + course._id);
+      thisClass.save(function(err) {
+        res.redirect( '/classes/' + thisClass._id);
       });
 
       // save to Git...
-      console.log("creating a repo named "+course.name);
+      console.log("creating a repo named "+thisClass.name);
 
       var GitHubApi = require("github");
       var github = new GitHubApi({
@@ -45,6 +59,7 @@ module.exports = {
         // optional
         timeout: 5000
       });
+
       github.authenticate({
         //type: "oauth" // obviously, make OAuth happen here.
         //, token: req.user.github.token // we're assuming this is here for now. Nulls? We don't handle no stinkin' nulls.
@@ -55,14 +70,14 @@ module.exports = {
 
      // this block is for debugging
      //github.user.getFollowingFromUser({
-     //  user: "coursefork-test"
+     //  user: "classfork-test"
      //}, function(err, res) {
      //  console.log(JSON.stringify(res));
      //});
 
       github.repos.create({
-        "name": course.name,
-        "description": course.description,
+        "name": thisClass.name,
+        "description": thisClass.description,
         "homepage": "https://github.com",
         "private": false,
         "has_wiki": true
@@ -73,33 +88,16 @@ module.exports = {
 
   }
   , view: function(req, res, next) {
-      Course.findOne({ _id: req.param('courseID') }).populate("_owner").exec(function(err, course) {
-        if (!course) {
-          next();
-        } else {
-          res.render('course', {
-            course: course
-          });
-        }
-      });
-    }
-  , addClass: function(req, res) {
-      Course.findOne({ _id: req.param('courseID') }).exec(function(err, course) {
-        Class.findOne({ _id: req.param('classID') }).exec(function(err, thisClass) {
-          course.classes.push({
-            _class: thisClass._id
-          });
-
-          course.save(function() {
-            res.redirect('/courses/' + course._id);
-          });
+      Class.findOne({ _id: req.param('classID') }).populate("_owner").exec(function(err, thisClass) {
+        res.render('class', {
+          thisClass: thisClass
         });
       });
     }
-  , fork: function(req, res, next) {
-    console.log("Rawesome, look at me forking course "+ courseName+" and owner "+ courseOwnerName);
-    var courseName = req.param('courseName')
-    var courseOwnerName = req.param('courseOwner')
+ , fork: function(req, res, next) {
+    console.log("Rawesome, look at me forking class "+ className+" and owner "+ classOwnerName);
+    var className = req.param('className')
+    var classOwnerName = req.param('classOwner')
     // Holy copy-n-paste!  Crappy code!
     var GitHubApi = require("github");
     var github = new GitHubApi({
@@ -112,28 +110,28 @@ module.exports = {
         //type: "oauth" // obviously, make OAuth happen here.
         //, token: req.user.github.token // we're assuming this is here for now. Nulls? We don't handle no stinkin' nulls.
           type: "basic"
-        , username: 'coursefork-test'
-        , password: 'coursefork001'
+        , username: 'classfork-test'
+        , password: 'classfork001'
     });
 
     // this block is for debugging
     //github.user.getFollowingFromUser({
-    //  user: "coursefork-test"
+    //  user: "classfork-test"
     //}, function(err, res) {
     //  console.log(JSON.stringify(res));
     //});
-    console.log("So we have this course: ", courseName);
-    console.log("...with this owner: ", courseOwnerName);
+    console.log("So we have this class: ", className);
+    console.log("...with this owner: ", classOwnerName);
 
     github.repos.fork({
-        "user": courseOwnerName
-      , "repo": courseName
+        "user": classOwnerName
+      , "repo": className
     }, function(forkerr, forkres) {
       console.log("Oh fork:", forkerr);
       if (forkres) {
-        // this is where we create a new course
+        // this is where we create a new class
         console.log("forkin' A", forkres);
-        res.redirect("/course/import/"+courseName);
+        res.redirect("/class/import/"+className);
       } else {
         res.redirect("/error");//...or something. Whatever.
       }

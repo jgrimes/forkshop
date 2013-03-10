@@ -5,22 +5,19 @@ var mongoose = require('mongoose')
 
 // this defines the fields associated with the model,
 // and moreover, their type.
-var CourseSchema = new Schema({
+var ClassSchema = new Schema({
     name: { type: String }
   , description: { type: String }
   , _creator: { type: ObjectId, ref: 'User' }
   , _owner: { type: ObjectId, ref: 'User' }
-  , classes: [new Schema({
-      _class: { type: ObjectId, ref: 'Class' }
-    })]
 });
 
 // attach the passport fields to the model
-CourseSchema.plugin(passportLocalMongoose);
+ClassSchema.plugin(passportLocalMongoose);
 
-var Course = mongoose.model('Course', CourseSchema);
+var Class = mongoose.model('Class', ClassSchema);
 
 // export the model to anything requiring it.
 module.exports = {
-  Course: Course
+  Class: Class
 };
