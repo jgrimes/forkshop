@@ -22,9 +22,13 @@ body {
   line-height: 1; }
 
 ol, ul, li {
-  margin: 1em;
+  margin: 0.25em;
   list-style: disc; 
-  line-height: 80%; }
+  line-height: 90%; }
+
+ul, ol {
+  max-height: 
+}
 
 table {
   border-collapse: collapse;
@@ -113,7 +117,7 @@ a:hover {
 h1 {
   color: #4da7ff;
   font-weight: bold;
-  font-size: 3em; }
+  font-size: 2em; }
 
 /* Imagine If style */
 .imagine {
@@ -186,8 +190,8 @@ h1 {
   font-family: 'Open Sans', Arial, sans-serif;
   color: #787a64;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-  font-size: 30px;
-  line-height: 36px;
+  font-size: 50px;
+  line-height: 55px;
   letter-spacing: -1px; }
 
 .slide q {
@@ -198,13 +202,14 @@ h1 {
 .slide q strong {
   white-space: nowrap; }
 .slide p {
-  margin: 1.25em 0; }
+  margin: 1.25em 0;
+  margin-bottom: 0; }
 .slide h1 {
   line-height: 100%; }
 .slide p, .slide h2, .slide h3, .slide h4, .slide h5, .slide h6 {
   margin-top: 1em; }
 .slide li, .slide ul {
-  margin: 0 100 0.5em; }
+  margin: 0 100; }
 
 /* IMPRESS NOT SUPPORTED STYLES */
 .fallback-message {
