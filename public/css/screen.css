@@ -43,16 +43,12 @@ footer {
 
 .navbar-inverse .brand,
 .navbar-inverse .nav > li > a {
-  color: #dddddd;
+  color: #2e333a;
 }
 
 .navbar-inverse .navbar-inner {
-  background-color: #87a5d0;
-  border-color: #87a5d0;
-}
-
-.navbar-inverse .brand {
-	color: #cccccc;
+  background-color: #c9deff;
+  border-color: #c9deff;
 }
 
 .titleimg {
@@ -67,6 +63,7 @@ footer {
 	/*background-color: #afcfff;*/
 	width: 100%;
 }
+
 
 .spanimg {
 	text-align: center;
