@@ -8,9 +8,15 @@ body {
 }
 
 .hero-unit {
-  background: url('http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2011/9/5/1315228538800/Project-Librarian-Jane-Ta-021.jpg');
+  background: url('/img/librarian.jpg');
   background-size: 100% auto;
   color: white;
+  text-shadow: 0 0 5px black,
+  0 0 5px black,
+  0 0 5px black,
+  0 0 15px black,
+  0 0 15px black
+  ;
 }
 
 .pitches .span4 {
