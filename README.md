@@ -1,8 +1,6 @@
-![logo](images/forkshophoriz700px.png)
-
 Fork your course
 ## What is it?
-Forkshop is a web app for designing and forking educational workshops.  
+Forkshop is a web app for designing and forking educational workshops.  Currently in super duper alpha, which means we may break this into pieces at any time.  Best wait til we make some progress to use.
 
 ## Usage
 You'll need [node.js](http://nodejs.org) and [mongodb](http://mongodb.org) to run this application.  Installing these is out-of-scope, and instructions are contained on the links to the left.
@@ -20,6 +18,6 @@ You'll now, by default, have a web application running at http://localhost:9200 
 © 2013 Elliott Hauser, Matt Hoffman, and Eric Martindale.  Provided under a [MIT License](http://opensource.org/licenses/MIT).
 
 ## History
-Created during a 53* hour [Startup Weekend](http://startupweekend.org/) sprint hosted by [Hub Raleigh](http://www.hubraleigh.com/).
+Created during a 53* hour [Startup Weekend](http://startupweekend.org/) sprint hosted by [Hub Raleigh](http://www.hubraleigh.com/).  The Coursefork team won the event outright and tied for People's Choice.
 
 \* Startup weekends are normally 54 hours but was a daylight savings weekend.
